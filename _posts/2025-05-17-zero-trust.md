@@ -4,8 +4,6 @@ date: 2025-05-17
 excerpt_separator: <!--more-->
 ---
 
-Zero-trust architecture treats every access request as untrusted. It’s a radical security model...
-
+Zero-trust treats everything as untrusted.
 <!--more-->
-
-Full details of the architecture go here.
+Full content here...
