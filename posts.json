@@ -3,13 +3,13 @@
     "title": "Zero-Trust Architecture",
     "date": "2025-05-17",
     "excerpt": "Zero-trust architecture treats every access request as untrusted...",
-    "content": "Zero-trust is a radical security model where no device or user is trusted by default. It enforces strict access control and continuous verification."
+    "content": "It’s a radical model where no user or device is trusted by default. Instead, continuous authentication and strict access policies are enforced."
   },
   {
     "title": "How I Debug Like a Psychopath",
     "date": "2025-04-29",
     "excerpt": "Step 1: Panic. Step 2: Add print statements...",
-    "content": "Step 3: Sacrifice a rubber duck. Step 4: It magically works and I forget to commit for 6 hours."
+    "content": "Step 3: Sacrifice a rubber duck. Step 4: It magically works and I forget to commit for 6 hours. Typical debugging workflow, right?"
   }
 ]
 
