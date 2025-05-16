@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shariar Kabir | AI/ML & Cybersecurity</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0e0e0e;
+      --bg-secondary: #1b1b1b;
+      --text-primary: #f5f5f5;
+      --text-secondary: #a5a5a5;
+      --accent: #6c63ff;
+      --border: #2e2e2e;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      font-family: 'Manrope', sans-serif;
+      font-weight: 300;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #1b1b1b, #252525);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--accent) !important;
+    }
+
+    .nav-link {
+      color: var(--text-primary) !important;
+      margin-left: 15px;
+    }
+
+    .nav-link:hover {
+      color: var(--accent) !important;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .profile-section {
+      position: sticky;
+      top: 100px;
+    }
+
+    @media (max-width: 991px) {
+      .profile-section {
+        position: static;
+        top: auto;
+      }
+
+      .hr-divider {
+        display: block;
+        border: none;
+        height: 1px;
+        background: linear-gradient(to right, transparent, var(--accent), transparent);
+        margin: 2.5rem 0;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .hr-divider {
+        display: none;
+      }
+    }
+
+    .profile-img {
+      width: 100%;
+      max-width: 240px;
+      border-radius: 8px;
+      border: 3px solid var(--border);
+      object-fit: cover;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: rgba(108, 99, 255, 0.1);
+      color: var(--accent);
+      padding: 6px 14px;
+      margin: 6px 6px 0 0;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+
+    .blog-post .card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .blog-post h5 {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .blog-post p:not(.text-muted) {
+      color: var(--text-primary);
+    }
+
+    .blog-post .card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .blog-post .text-muted {
+      color: #bbbbbb !important;
+      font-size: 0.9rem;
+    }
+
+    .blog-content {
+      overflow: hidden;
+      max-height: 4.5em;
+      line-height: 1.5em;
+    }
+
+    .blog-post.active .blog-content {
+      max-height: none;
+    }
+
+    .read-more {
+      color: var(--accent);
+      font-weight: 500;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand" href="#">SHARIAR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="pt-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 profile-section text-center text-lg-start">
+          <img src="shariar.png" class="profile-img mb-3" alt="Shariar Kabir">
+          <h2 class="fw-bold">Shariar Kabir</h2>
+          <p class="text-secondary">AI/ML Engineer & Cybersecurity Specialist</p>
+          <p class="mb-3">I build secure, intelligent systems that withstand adversaries and scale effortlessly. Experienced in ML, Python, and system architecture.</p>
+          <div>
+            <span class="skill-tag">AI/ML</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Cybersecurity</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Docker</span>
+          </div>
+        </div>
+
+        <hr class="hr-divider">
+
+        <div class="col-lg-8">
+          <div class="blog-post mb-4">
+            <div class="card p-4">
+              <h5>Zero-Trust Architecture</h5>
+              <p class="text-muted">May 5, 2025</p>
+              <div class="blog-content">
+                <p>Zero-trust architecture treats every access request as untrusted. It’s a radical security model where no user or device is trusted by default—even inside the network perimeter.</p>
+              </div>
+              <span class="read-more">Read more</span>
+            </div>
+          </div>
+
+          <div class="blog-post mb-4">
+            <div class="card p-4">
+              <h5>How I Debug Like a Psychopath</h5>
+              <p class="text-muted">April 29, 2025</p>
+              <div class="blog-content">
+                <p>Step 1: Panic. Step 2: Add print statements. Step 3: Sacrifice a rubber duck. Step 4: It magically works and I forget to commit for 6 hours.</p>
+              </div>
+              <span class="read-more">Read more</span>
+            </div>
+          </div>
+
+          <div class="blog-post mb-4">
+            <div class="card p-4">
+              <h5>AI Models Don’t Sleep (But I Do)</h5>
+              <p class="text-muted">April 20, 2025</p>
+              <div class="blog-content">
+                <p>Training deep models while dreaming of pizza and hoping dropout keeps my neurons disciplined. Here's how I keep the machines productive and myself alive.</p>
+              </div>
+              <span class="read-more">Read more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 border-top">
+    <p class="mb-0">© 2025 Shariar Kabir</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('.blog-post .card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.parentElement.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
