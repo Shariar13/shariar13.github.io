@@ -161,7 +161,8 @@
           <img src="shariar.png" class="profile-img mb-3" alt="Shariar Kabir">
           <h2 class="fw-bold">Shariar Kabir</h2>
           <p class="text-secondary">AI/ML Engineer & Cybersecurity Specialist</p>
-          <p class="mb-3">I build secure, intelligent systems that withstand adversaries and scale effortlessly. Experienced in ML, Python, and system architecture.</p>
+          <p class="mb-3">I build secure, intelligent systems that withstand adversaries and scale effortlessly.
+            Experienced in ML, Python, and system architecture.</p>
           <div>
             <span class="skill-tag">AI/ML</span>
             <span class="skill-tag">Python</span>
@@ -175,38 +176,22 @@
         <hr class="hr-divider">
 
         <div class="col-lg-8">
-          <div class="blog-post mb-4">
-            <div class="card p-4">
-              <h5>Zero-Trust Architecture</h5>
-              <p class="text-muted">May 5, 2025</p>
-              <div class="blog-content">
-                <p>Zero-trust architecture treats every access request as untrusted. It’s a radical security model where no user or device is trusted by default—even inside the network perimeter.</p>
+
+          <div id="blog-list">
+            {% for post in site.posts %}
+            <div class="blog-post mb-4">
+              <div class="card p-4">
+                <h5>{{ post.title }}</h5>
+                <p class="text-muted">{{ post.date | date: '%B %d, %Y' }}</p>
+                <div class="blog-content">
+                  {{ post.excerpt }}
+                </div>
+                <a href="{{ post.url }}" class="read-more">Read more</a>
               </div>
-              <span class="read-more">Read more</span>
             </div>
+            {% endfor %}
           </div>
 
-          <div class="blog-post mb-4">
-            <div class="card p-4">
-              <h5>How I Debug Like a Psychopath</h5>
-              <p class="text-muted">April 29, 2025</p>
-              <div class="blog-content">
-                <p>Step 1: Panic. Step 2: Add print statements. Step 3: Sacrifice a rubber duck. Step 4: It magically works and I forget to commit for 6 hours.</p>
-              </div>
-              <span class="read-more">Read more</span>
-            </div>
-          </div>
-
-          <div class="blog-post mb-4">
-            <div class="card p-4">
-              <h5>AI Models Don’t Sleep (But I Do)</h5>
-              <p class="text-muted">April 20, 2025</p>
-              <div class="blog-content">
-                <p>Training deep models while dreaming of pizza and hoping dropout keeps my neurons disciplined. Here's how I keep the machines productive and myself alive.</p>
-              </div>
-              <span class="read-more">Read more</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
