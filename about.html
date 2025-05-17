@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Shariar Kabir | AI/ML & Cybersecurity</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="shariar.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <style>
+        :root {
+            --bg-color: #0e0e0e;
+            --bg-secondary: #1b1b1b;
+            --text-primary: #f5f5f5;
+            --text-secondary: #a5a5a5;
+            --accent: #6c63ff;
+            --border: #2e2e2e;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Manrope', sans-serif;
+            font-weight: 300;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #1b1b1b, #252525);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--accent) !important;
+        }
+
+        .nav-link {
+            color: var(--text-primary) !important;
+            margin-left: 15px;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        .hero-section {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(14, 14, 14, 0.9) 0%, rgba(27, 27, 27, 0.8) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(108, 99, 255, 0.1) 0%, rgba(14, 14, 14, 0) 70%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-img {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            object-fit: cover;
+            box-shadow: 0 0 30px rgba(108, 99, 255, 0.3);
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(108, 99, 255, 0.1);
+            color: var(--accent);
+            padding: 6px 14px;
+            margin: 6px 6px 6px 0;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(108, 99, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin-top: 15px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), transparent);
+            left: 0;
+            top: 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent);
+            left: -38px;
+            top: 5px;
+            box-shadow: 0 0 10px rgba(108, 99, 255, 0.8);
+        }
+
+        .timeline-date {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-location {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            transition: all 0.4s ease;
+            margin-bottom: 25px;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 10px rgba(108, 99, 255, 0.1);
+            border-color: rgba(108, 99, 255, 0.3);
+        }
+
+        .project-card {
+            height: 100%;
+        }
+
+        .project-title {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .paper-card {
+            border-left: 4px solid var(--accent);
+        }
+
+        .paper-journal {
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+        }
+
+        .social-icon:hover {
+            background: var(--accent);
+            color: #fff;
+            transform: translateY(-5px);
+        }
+
+        .stats-counter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .stats-title {
+            color: var(--text-secondary);
+        }
+
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.03;
+        }
+
+        .floating-dots {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-2000px) translateX(1000px);
+                opacity: 0;
+            }
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            background: var(--bg-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">SHARIAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="animated-bg" id="animated-bg"></div>
+
+    <section class="hero-section pt-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="shariar.png" class="hero-img mb-4" alt="Shariar Kabir">
+                </div>
+                <div class="col-lg-8 hero-content" data-aos="fade-left" data-aos-delay="200">
+                    <h1 class="fw-bold mb-3">Shariar Kabir</h1>
+                    <h3 class="text-accent mb-4" style="color: var(--accent);">AI/ML Engineer & Cybersecurity Specialist
+                    </h3>
+                    <p class="lead mb-4">A passionate technologist with expertise in artificial intelligence, machine
+                        learning, and
+                        cybersecurity. Building intelligent systems that solve real-world problems while maintaining the
+                        highest
+                        security standards. My journey spans from developing complex ML algorithms to implementing
+                        robust
+                        cybersecurity solutions.</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/shariar13" class="social-icon" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/shariar13" class="social-icon" target="_blank"
+                            title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=BpsdXu4AAAAJ&hl=en&oi=ao" class="social-icon"
+                            target="_blank" title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="mailto:contact.shariarkabir@gmail.com" class="social-icon" target="_blank"
+                            title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5" data-aos="fade-up">
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stats-counter count-up" data-target="7">0</div>
+                    <div class="stats-title">Research Papers</div>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stats-counter count-up" data-target="30">0</div>
+                    <div class="stats-title">Projects Completed</div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-counter count-up" data-target="3">0</div>
+                    <div class="stats-title">Years Experience</div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-counter count-up" data-target="13">0</div>
+                    <div class="stats-title">Technologies Mastered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-secondary py-5" style="background-color: var(--bg-secondary) !important;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Education</h2>
+            <div class="timeline" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 - Present</div>
+                    <div class="timeline-title">MSc in Cyber Security and Forensics Information Technology</div>
+                    <div class="timeline-location">University of Portsmouth, UK</div>
+                    <p>Currently pursuing advanced studies in cybersecurity with focus on digital forensics, network
+                        security, and
+                        ethical hacking. Serving as a Research Assistant while completing coursework.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2019 - 2023</div>
+                    <div class="timeline-title">BSc in Computer Science and Engineering</div>
+                    <div class="timeline-location">Daffodil International University, Bangladesh</div>
+                    <p>Graduated with focus on artificial intelligence, machine learning, and software development.
+                        Participated in
+                        numerous hackathons and served as Course Instructor at Computer and Programming Club (CPC).</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2016 - 2018</div>
+                    <div class="timeline-title">Higher Secondary Certificate (HSC) in Science</div>
+                    <div class="timeline-location">Jhenaidah Govt. KC College, Bangladesh</div>
+                    <p>Completed HSC with excellence in mathematics, physics, and chemistry.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2014 - 2016</div>
+                    <div class="timeline-title">Secondary School Certificate (SSC) in Science</div>
+                    <div class="timeline-location">Jhenaidah Govt. Boys High School, Bangladesh</div>
+                    <p>Completed SSC with distinction in science subjects, laying the foundation for future technical
+                        pursuits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Professional Experience</h2>
+            <div class="timeline" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 - Present</div>
+                    <div class="timeline-title">Research Assistant</div>
+                    <div class="timeline-location">University of Portsmouth, UK</div>
+                    <p>Conducting research in cybersecurity and AI integration, focusing on developing secure ML systems
+                        and
+                        exploring advanced threat detection mechanisms using artificial intelligence.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2023</div>
+                    <div class="timeline-title">Software Engineer</div>
+                    <div class="timeline-location">Base Camp</div>
+                    <p>Developed custom learning solutions for clients across various industries. Projects ranged from
+                        image
+                        classification systems to predictive analytics platforms and recommendation engines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-secondary py-5" style="background-color: var(--bg-secondary) !important;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Skills & Expertise</h2>
+            <div class="row" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-4 mb-4">
+                    <div class="card p-4 h-100">
+                        <h4 class="mb-3" style="color: var(--accent);">AI & Machine Learning</h4>
+                        <div>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">Computer Vision</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">Reinforcement Learning</span>
+                            <span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">Neural Networks</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card p-4 h-100">
+                        <h4 class="mb-3" style="color: var(--accent);">Cybersecurity</h4>
+                        <div>
+                            <span class="skill-tag">Network Security</span>
+                            <span class="skill-tag">Digital Forensics</span>
+                            <span class="skill-tag">Penetration Testing</span>
+                            <span class="skill-tag">Secure Coding</span>
+                            <span class="skill-tag">Threat Analysis</span>
+                            <span class="skill-tag">Security Auditing</span>
+                            <span class="skill-tag">Cryptography</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card p-4 h-100">
+                        <h4 class="mb-3" style="color: var(--accent);">Development</h4>
+                        <div>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">NoSQL</span>
+                            <span class="skill-tag">RESTful APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Research Publications</h2>
+            <div class="row" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-12">
+                    <div class="card paper-card p-4 mb-4">
+                        <h5 class="project-title">The early detection of dementia disease using machine learning
+                            approach</h5>
+                        <p class="paper-journal">International Conference on Computer Communication and Informatics
+                            systems</p>
+                        <p style="color: white;">This research introduces a novel neural network architecture optimized
+                            for detecting data
+                            with minimal computational overhead.</p>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10128411" target="_blank" class="text-accent"
+                            style="color: var(--accent);">View Publication <i
+                                class="fas fa-external-link-alt ms-1"></i></a>
+                    </div>
+
+                    <div class="card paper-card p-4 mb-4">
+                        <h5 class="project-title">A Deep Transfer Learning-Based Approach to Detect Skin Disease</h5>
+                        <p class="paper-journal">European Chemical Bulletin</p>
+                        <p style="color: white;">Presented a hybrid deep learning methodology combining CNN and LSTM
+                            networks to identify
+                            sophisticated images with 99.99% accuracy, surpassing traditional detection methods.</p>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BpsdXu4AAAAJ&citation_for_view=BpsdXu4AAAAJ:roLk4NBRz8UC" target="_blank"
+                            class="text-accent" style="color: var(--accent);">View Publication <i
+                                class="fas fa-external-link-alt ms-1"></i></a>
+                    </div>
+
+                    <div class="card paper-card p-4 mb-4">
+                        <h5 class="project-title">A TRANSFER LEARNING-BASED APPROACH TO DETECT MEDICINAL PLANT IN RURAL
+                            AREA</h5>
+                        <p class="paper-journal">Journal of Emerging Technologies and Innovative Research</p>
+                        <p style="color: white;"> We have used some algorithm that are VGG16 with 96% accuracy and VGG19
+                            with 97% accuracy. Here we have taken 200 pictures of each leaf of the medicinal plant from
+                            different angles. And with the help of these algorithm, we have determined different
+                            parameters including height, weight, size, and color of leaves. Then we trained in the deep
+                            learning algorithms. After training with some algorithms, our best accuracy is 99% with
+                            ResNet50 algorithm. If we can apply this model through our mobile app or web, then everyone
+                            will be able to understand by scanning the leaves of the tree through it, which medicinal
+                            plant it is. </p>
+                        <a href="https://www.jetir.org/view?paper=JETIRFM06072" target="_blank" class="text-accent"
+                            style="color: var(--accent);">View Publication <i
+                                class="fas fa-external-link-alt ms-1"></i></a>
+                    </div>
+
+                    <div class="card paper-card p-4 mb-4">
+                        <h5 class="project-title">A Comprehensive Dataset for Accurate Identification of Medicinal Plant
+                            Leaves</h5>
+                        <p class="paper-journal">SSRN 4671018</p>
+                        <p style="color: white;">This study introduces a comprehensive dataset tailored for the precise
+                            identification of medicinal plant leaves. The dataset encompasses diverse species, capturing
+                            variations in leaf morphology, texture, and color. Collected through rigorous curation, the
+                            dataset serves as a valuable resource for training and evaluating computer vision-based deep
+                            learning models aimed at accurate medicinal plant recognition. Leveraging advanced image
+                            processing techniques, this dataset facilitates the development of robust algorithms crucial
+                            for automating the identification of medicinal plants based on their leaves. The dataset's
+                            richness and diversity make it a cornerstone for enhancing the reliability and efficiency of
+                            medicinal plant identification systems, thereby contributing to advancements in botanical
+                            research and healthcare. This dataset includes 11040 leaf images (original 1380, augmented
+                            9660) of medicinal plants encompassing six different medicinal plant classes (Arjun Leaf,
+                            Curry Leaf, Marsh Pennywort Leaf, Mint Leaf, Neem Leaf, and Rubble Leaf), collected from
+                            June 10 to November 20, 2023, in a real nursery. This dataset, hosted by Daffodil
+                            International University's Department of Computer Science and Engineering, is publicly
+                            available at https://data. mendeley. com/datasets/fj93rrfv2y/2.</p>
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4671018" target="_blank" class="text-accent"
+                            style="color: var(--accent);">View Publication <i
+                                class="fas fa-external-link-alt ms-1"></i></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-secondary py-5" style="background-color: var(--bg-secondary) !important;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Featured Projects</h2>
+            <div class="row" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card project-card p-4 h-100">
+                        <h5 class="project-title">DeepGuard</h5>
+                        <p style="color: white;">AI-based forensic image authenticity detection tool using zero-shot CLIP embeddings combined
+                            with
+                            forensic-level features to distinguish between real and AI-generated images.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card project-card p-4 h-100">
+                        <h5 class="project-title">ThinkAI</h5>
+                        <p style="color: white;">Multipurpose AI generation platform capable of producing high-quality images, structured
+                            PDFs, and
+                            formatted DOC files from textual prompts using state-of-the-art AI models.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card project-card p-4 h-100">
+                        <h5 class="project-title">Django IP Lock</h5>
+                        <p style="color: white;">A Django middleware plugin that restricts login attempts based on IP addresses to enhance
+                            admin security
+                            and reduce brute-force attacks on web applications.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card project-card p-4 h-100">
+                        <h5 class="project-title">MockTak</h5>
+                        <p style="color: white;">Social platform for IELTS learners featuring Facebook-style timeline, test analytics, and
+                            smart community system tailored for language test preparation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card project-card p-4 h-100">
+                        <h5 class="project-title">Python Virtual Assistant</h5>
+                        <p style="color: white;">Speech-enabled AI assistant built with Python, capable of executing tasks like opening apps,
+                            fetching information, and processing complex voice commands.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card project-card p-4 h-100">
+                        <h5 class="project-title">Dengue Prediction with Django & ML</h5>
+                        <p style="color: white;">Smart system that predicts the probability of dengue fever based on user inputs by
+                            merging Django's web capabilities with backend ML classifiers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Extracurricular Activities</h2>
+            <div class="row" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6 mb-4">
+                    <div class="card p-4 h-100">
+                        <h5 class="project-title">Course Instructor</h5>
+                        <p class="text-secondary mb-3">Computer and Programming Club (CPC)</p>
+                        <p style="color: white;">Led specialized workshops on machine learning, Python programming, and web development.
+                            Mentored junior
+                            students on project development and competitive programming techniques.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card p-4 h-100">
+                        <h5 class="project-title">Hackathon Participant</h5>
+                        <p class="text-secondary mb-3">Multiple National & International Events</p>
+                        <p style="color: white;">Participated in and won awards at several hackathons, developing innovative solutions
+                            under time constraints and collaborating with diverse teams.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card p-4 h-100">
+                        <h5 class="project-title">Open Source Contributor</h5>
+                        <p class="text-secondary mb-3">Various GitHub Projects</p>
+                        <p style="color: white;">Actively contributed to open-source projects related to AI/ML, cybersecurity tools, and
+                            Python libraries,
+                            helping improve documentation and adding new features.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card p-4 h-100">
+                        <h5 class="project-title">Technical Blog Writer</h5>
+                        <p class="text-secondary mb-3">Personal Blog & Medium</p>
+                        <p style="color: white;">Published technical articles on AI/ML implementation, cybersecurity best practices, and
+                            software development
+                            tutorials to share knowledge with the broader community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4">
+        <p class="mb-0">© 2025 Shariar Kabir</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+
+        // Create floating dots for background animation
+        function createFloatingDots() {
+            const bg = document.getElementById('animated-bg');
+            const dotsCount = 40;
+
+            for (let i = 0; i < dotsCount; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('floating-dots');
+
+                // Random positioning
+                dot.style.left = `${Math.random() * 100}%`;
+                dot.style.top = `${Math.random() * 100}%`;
+
+                // Random size (3-8px)
+                const size = 3 + Math.random() * 5;
+                dot.style.width = `${size}px`;
+                dot.style.height = `${size}px`;
+
+                // Random opacity (0.3-0.8)
+                dot.style.opacity = 0.3 + Math.random() * 0.5;
+
+                // Random animation duration and delay
+                const duration = 15 + Math.random() * 30;
+                const delay = Math.random() * 15;
+                dot.style.animation = `float ${duration}s infinite linear`;
+                dot.style.animationDelay = `${delay}s`;
+
+                bg.appendChild(dot);
+            }
+        }
+
+        createFloatingDots();
+
+        // Animate counters
+        function animateCounters() {
+            const counters = document.querySelectorAll('.count-up');
+            const speed = 200;
+
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+
+                const updateCount = () => {
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        count += increment;
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCount();
+            });
+        }
+
+        // Trigger counter animation when scrolled into view
+        const statsSection = document.querySelector('.stats-counter');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.querySelectorAll('.count-up').forEach(counter => {
+            observer.observe(counter);
+        });
+    </script>
+</body>
+
+</html>
