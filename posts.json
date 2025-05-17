@@ -1,12 +1,37 @@
 [
   {
-    "title": "Zero-Trust Architecture",
-    "date": "2025-05-17",
-    "content": "Zero-trust architecture treats every access request as untrusted. It’s a radical model where no user or device is trusted by default. Instead, continuous authentication and strict access policies are enforced."
+    "title": "DeepGuard: AI-Powered Image Authentication for a Synthetic World",
+    "date": "2025-05-18",
+    "content": "DeepGuard is a state-of-the-art forensic AI system designed to detect AI-generated images with high accuracy. Using hybrid models combining handcrafted features and deep learning architectures, DeepGuard analyzes pixel-level inconsistencies, PRNU patterns, and transformer-based embeddings to flag manipulated visuals. It's lightweight, explainable, and optimized for both speed and reliability, making it suitable for forensic investigators, researchers, and commercial deployment. As deepfakes grow more realistic, tools like DeepGuard are no longer optional\u2014they're essential."
   },
   {
-    "title": "How I Debug Like a Psychopath",
-    "date": "2025-04-29",
-    "content": "Step 1: Panic. Step 2: Add print statements. Step 3: Sacrifice a rubber duck. Step 4: It magically works and I forget to commit for 6 hours."
+    "title": "How I Taught My Neural Network to Fear Cats",
+    "date": "2025-05-17",
+    "content": "In the world of AI, data is king\u2014and I royally screwed it up. What started as a simple image classifier became a sentient entity that flagged cats as threats. Why? Because my training data included 800 images of angry cats and only 12 images of dogs. The model was so biased it would've arrested Garfield. Moral of the story? Normalize your inputs, and maybe your sense of humor too."
+  },
+  {
+    "title": "The Day My Python Script Went Rogue",
+    "date": "2025-05-16",
+    "content": "I asked Python to automate a report. It automated my sanity. One misplaced loop later, my system was sending 100,000 API requests per minute to the HR server. The result? I got flagged by the IT department and ironically received a job offer from a cybersecurity firm. Lesson learned: `while True` is both powerful and dangerous. Handle with caffeine."
+  },
+  {
+    "title": "AI Doesn\u2019t Steal Jobs, But It Might Roast You",
+    "date": "2025-05-15",
+    "content": "Everyone fears AI will take their job. Not me. Mine critiques my code. Every time I run a model, it politely suggests refactoring. Then it autocorrects my variable names. \u2018temp123\u2019 became \u2018whatAreYouEvenDoing\u2019. My self-worth is now version-controlled. In the age of AI, your job is safe\u2014but your ego might not be."
+  },
+  {
+    "title": "Zero Trust, Zero Friends: My Journey to Cybersecurity Paranoia",
+    "date": "2025-05-14",
+    "content": "Implementing Zero Trust security taught me more about friendship than firewalls. I no longer trust my printer. My fridge is on a VLAN. My cat needs two-factor authentication to come inside. In a Zero Trust world, everyone is suspicious\u2014including you. But at least the network is secure."
+  },
+  {
+    "title": "When You Docker-Compose Into Chaos",
+    "date": "2025-05-13",
+    "content": "I love Docker. Until I don\u2019t. One evening, I spun up 12 containers\u2014one for each microservice and my existential dread. By the time I figured out the networking issues, my app was talking to itself, and I had entered the fourth layer of YAML hell. But hey, it worked on my machine. And isn\u2019t that what really matters?"
+  },
+  {
+    "title": "ML Models Are Like Toddlers: Loud, Unstable, and Easily Distracted",
+    "date": "2025-05-12",
+    "content": "Training an ML model feels like parenting. It forgets what it learned yesterday, overfits when you give it too much candy (data), and throws tantrums during validation. But once it matures\u2014after 27 epochs and 4 GPU burnouts\u2014it starts behaving like a genius. Until you put it in production. Then it forgets everything again."
   }
 ]
