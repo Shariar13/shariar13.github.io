@@ -8,6 +8,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="shariar.png">
+
   <style>
     :root {
       --bg-color: #0e0e0e;
@@ -53,6 +55,7 @@
     .profile-section {
       position: sticky;
       top: 100px;
+      align-self: flex-start;
     }
 
     @media (max-width: 991px) {
@@ -142,14 +145,14 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
     <div class="container">
-      <a class="navbar-brand" href="#">SHARIAR</a>
+      <a class="navbar-brand" href="">SHARIAR</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="">About</a></li>
         </ul>
       </div>
     </div>
@@ -157,13 +160,15 @@
 
   <section id="home" class="pt-5 mt-5">
     <div class="container">
-      <div class="row">
+      <div class="row d-flex flex-lg-nowrap">
         <div class="col-lg-4 profile-section text-center text-lg-start">
           <img src="shariar.png" class="profile-img mb-3" alt="Shariar Kabir">
           <h2 class="fw-bold">Shariar Kabir</h2>
           <p class="text-secondary">AI/ML Engineer & Cybersecurity Specialist</p>
-          <p class="mb-3">I build secure, intelligent systems that withstand adversaries and scale effortlessly.
-            Experienced in ML, Python, and system architecture.</p>
+          <p class="mb-3">Building intelligent systems while forgetting my own passwords. I train machines to be smart
+            so I don’t have to be. I debug like it’s an Olympic sport, powered by caffeine and questionable optimism.
+            Most of my projects start as “just testing something” and end up in production. I don’t always write code —
+            but when I do, it works… eventually.</p>
           <div>
             <span class="skill-tag">AI/ML</span>
             <span class="skill-tag">Python</span>
@@ -171,17 +176,14 @@
             <span class="skill-tag">TensorFlow</span>
             <span class="skill-tag">PyTorch</span>
             <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Django</span>
           </div>
         </div>
 
         <hr class="hr-divider">
 
         <div class="col-lg-8">
-
-          <div id="blog-list">
-
-          </div>
-
+          <div id="blog-list"></div>
         </div>
       </div>
     </div>
@@ -192,60 +194,53 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script>
-fetch('posts.json')
-  .then(response => response.json())
-  .then(posts => {
-    const container = document.getElementById('blog-list');
-    posts.forEach(post => {
-      const blogWrapper = document.createElement('div');
-      blogWrapper.className = 'blog-post mb-4';
+  <script>
+    fetch('posts.json')
+      .then(response => response.json())
+      .then(posts => {
+        const container = document.getElementById('blog-list');
+        posts.forEach(post => {
+          const blogWrapper = document.createElement('div');
+          blogWrapper.className = 'blog-post mb-4';
 
-      const card = document.createElement('div');
-      card.className = 'card p-4';
-      card.style.color = 'var(--text-primary)';
+          const card = document.createElement('div');
+          card.className = 'card p-4';
+          card.style.color = 'var(--text-primary)';
 
-      const fullContent = post.content;
-      const shortContent = fullContent.split('. ').slice(0, 3).join('. ') + (fullContent.split('. ').length > 3 ? '...' : '');
+          const fullContent = post.content;
+          const shortContent = fullContent.split('. ').slice(0, 3).join('. ') + (fullContent.split('. ').length > 3 ? '...' : '');
 
-      card.innerHTML = `
-        <h5>${post.title}</h5>
-        <p class="text-muted">${new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-        <div class="blog-content">${shortContent}</div>
-        <a href="#" class="read-more mt-2 d-inline-block">Read more</a>
-      `;
+          card.innerHTML = `
+            <h5>${post.title}</h5>
+            <p class="text-muted">${new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            <div class="blog-content">${shortContent}</div>
+            <a href="#" class="read-more mt-2 d-inline-block">Read more</a>
+          `;
 
-      const blogContentDiv = card.querySelector('.blog-content');
-      const readMoreLink = card.querySelector('.read-more');
+          const blogContentDiv = card.querySelector('.blog-content');
+          const readMoreLink = card.querySelector('.read-more');
 
-      function toggleContent() {
-        const isExpanded = blogWrapper.classList.toggle('active');
-        blogContentDiv.textContent = isExpanded ? fullContent : shortContent;
-        readMoreLink.textContent = isExpanded ? 'Show less' : 'Read more';
-      }
+          function toggleContent() {
+            const isExpanded = blogWrapper.classList.toggle('active');
+            blogContentDiv.textContent = isExpanded ? fullContent : shortContent;
+            readMoreLink.textContent = isExpanded ? 'Show less' : 'Read more';
+          }
 
-      // Toggle on card click
-      card.addEventListener('click', (e) => {
-        // Prevent double toggle if read-more clicked
-        if (e.target.classList.contains('read-more')) return;
-        toggleContent();
+          card.addEventListener('click', (e) => {
+            if (e.target.classList.contains('read-more')) return;
+            toggleContent();
+          });
+
+          readMoreLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            toggleContent();
+          });
+
+          blogWrapper.appendChild(card);
+          container.appendChild(blogWrapper);
+        });
       });
-
-      // Toggle on read-more click too
-      readMoreLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        toggleContent();
-      });
-
-      blogWrapper.appendChild(card);
-      container.appendChild(blogWrapper);
-    });
-  });
-</script>
-
-
-
-
+  </script>
 </body>
 
 </html>
