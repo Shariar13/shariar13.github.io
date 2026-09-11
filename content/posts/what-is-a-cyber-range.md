@@ -23,15 +23,15 @@ The word "isolated" is doing most of the work. A cyber range is not a vulnerable
 
 ## Types of cyber range lab
 
-Different questions need different kinds of environment. The main lab types I use:
+Different questions need different kinds of environment. The main lab types in use:
 
-| Lab type | What it looks like | Best for teaching | Effort to build |
-|---|---|---|---|
-| CTF-style challenge | One container or VM with a specific flaw and a flag to capture | A single technique: SQLi, a misconfigured service, a crypto mistake | Low |
-| Emulated enterprise network | A subnet with domain controller, workstations, file server, web app | Enumeration, lateral movement, privilege escalation, defence in depth | High |
-| Red vs blue exercise | Two teams on one network, one attacking, one defending live | Incident response, detection, communication under pressure | High, plus refereeing |
-| Forensics / analysis | A disk image, packet capture or log set, no live target | Investigation, evidence handling, reasoning from artefacts | Low to medium |
-| Guided walkthrough | A challenge with staged hints and checkpoints | First-year students, confidence building | Low |
+| Lab type | What it looks like | Best for teaching |
+|---|---|---|
+| CTF-style challenge | One container or VM with a specific flaw and a flag to capture | A single technique: SQLi, a misconfigured service, a crypto mistake |
+| Emulated enterprise network | A subnet with domain controller, workstations, file server, web app | Enumeration, lateral movement, privilege escalation, defence in depth |
+| Red vs blue exercise | Two teams on one network, one attacking, one defending live | Incident response, detection, communication under pressure |
+| Forensics / analysis | A disk image, packet capture or log set, no live target | Investigation, evidence handling, reasoning from artefacts |
+| Guided walkthrough | A challenge with staged hints and checkpoints | First-year students, confidence building |
 
 CTF-style challenges are the workhorse. They are cheap to build, cheap to reset, and each one teaches one thing cleanly. Enterprise emulations teach that the vulnerability is rarely on the box you started with. Red versus blue is the most fun and the hardest to run well, because it needs an honest referee, a clock, and a plan for when the red team wins in the first ten minutes.
 
