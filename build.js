@@ -34,7 +34,7 @@ const SITE = {
   },
   ogImage: "https://shariarkabir.com/assets/img/og-image.jpg",
   homepagePosts: 5,
-  staticFiles: ["index.html", "404.html", "robots.txt", "_headers", "_redirects", "site.webmanifest",
+  staticFiles: ["index.html", "cv.html", "publications.html", "404.html", "robots.txt", "_headers", "_redirects", "site.webmanifest",
     "favicon.svg", "favicon.ico", "apple-touch-icon.png", "icon-192.png", "icon-512.png"],
   staticDirs: ["assets"],
 };
@@ -164,9 +164,8 @@ function layout({ title, description, canonical, body, ogType = "website", ogIma
     <nav class="site-nav" id="nav" aria-label="Primary">
       <a href="/#about">About</a>
       <a href="/#research">Research</a>
-      <a href="/#publications">Publications</a>
-      <a href="/#awards">Awards</a>
-      <a href="/#experience">CV</a>
+      <a href="/publications">Publications</a>
+      <a href="/cv">CV</a>
       <a href="/blog/" class="is-active">Writing</a>
     </nav>
     <div class="header-tools">
@@ -305,6 +304,8 @@ function renderSitemap(posts) {
   const today = new Date().toISOString().slice(0, 10);
   const urls = [
     { loc: SITE.url + "/", lastmod: today, priority: "1.0", changefreq: "monthly" },
+    { loc: SITE.url + "/publications", lastmod: today, priority: "0.8", changefreq: "monthly" },
+    { loc: SITE.url + "/cv", lastmod: today, priority: "0.7", changefreq: "monthly" },
     { loc: SITE.url + "/blog/", lastmod: posts[0] ? posts[0].date : today, priority: "0.8", changefreq: "weekly" },
     ...posts.map((p) => ({ loc: p.url, lastmod: p.updated || p.date, priority: "0.7", changefreq: "yearly" })),
   ];

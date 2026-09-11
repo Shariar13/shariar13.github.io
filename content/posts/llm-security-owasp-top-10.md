@@ -82,7 +82,7 @@ The two rows that matter most are prompt injection and excessive agency. Injecti
 
 ## Logging: the mitigation nobody lists first
 
-Every one of the mitigations above fails sometimes. What saves you afterwards is a record of what the model saw, what it decided and what tools it called, with enough context to reconstruct the incident. Log prompts (minus secrets), retrieved content, tool invocations and their arguments, and outputs. Feed it into whatever you already use for [security monitoring](/blog/siem-explained-for-developers/). When the recipe attack hits production, "the assistant sent an email" is a mystery; "the assistant read page X, which contained instruction Y, and called send_email with arguments Z" is an incident report.
+Every one of the mitigations above fails sometimes. What saves you afterwards is a record of what the model saw, what it decided and what tools it called, with enough context to reconstruct the incident. Log prompts (minus secrets), retrieved content, tool invocations and their arguments, and outputs. Feed it into whatever you already use for security monitoring. When the recipe attack hits production, "the assistant sent an email" is a mystery; "the assistant read page X, which contained instruction Y, and called send_email with arguments Z" is an incident report.
 
 ## What to remember
 

@@ -81,7 +81,7 @@ The **work factor** is the knob that makes the hash slow. The guidance is to tun
 
 A **pepper** is a secret value, the same for all users, mixed into the hashing but stored somewhere other than the database, typically a secrets manager or a hardware security module. If the database leaks on its own, the hashes are useless without the pepper. It is an extra layer, not a replacement for a slow hash, and it makes rotation a chore, so use it deliberately.
 
-**Rate limiting** is the part that has nothing to do with cryptography and stops most real attacks anyway. Offline cracking needs a leaked database. Online guessing needs your login endpoint to accept unlimited attempts. Throttle by account and by source, add progressive delays, and log the failures somewhere a [SIEM](/blog/siem-explained-for-developers/) can see them. If you have moved to single sign-on with [OAuth2 and OpenID Connect](/blog/oauth2-oidc-keycloak-explained/), your identity provider should be doing this for you, but check.
+**Rate limiting** is the part that has nothing to do with cryptography and stops most real attacks anyway. Offline cracking needs a leaked database. Online guessing needs your login endpoint to accept unlimited attempts. Throttle by account and by source, add progressive delays, and log the failures somewhere your monitoring can see them. If you have moved to single sign-on with OAuth2 and OpenID Connect, your identity provider should be doing this for you, but check.
 
 ## When the database leaks anyway
 
@@ -108,4 +108,4 @@ The last defence is refusing bad passwords in the first place. NIST's guidance h
 - [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) for current parameter recommendations.
 - [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) for the authenticator guidance behind "check against breached lists, drop the complexity rules".
 
-Authentication is a recurring theme in the [Zero Trust research I do](/#research), where the working assumption is that every credential will eventually leak and the architecture has to survive it. If your site can email me my password, it has not survived anything yet.
+Authentication is a recurring theme in security research generally, where the working assumption is that every credential will eventually leak and the architecture has to survive it. If your site can email me my password, it has not survived anything yet.

@@ -9,7 +9,7 @@ Picture a first anomaly detector for network traffic that has one confirmed dete
 
 Meanwhile a student in a lab was port-scanning half the subnet for a coursework exercise, and the model said nothing, because port scans had been in the training data and the training data was labelled "normal".
 
-That is machine learning intrusion detection in miniature: a model that learns exactly what you show it, a network that never stops changing, and an analyst who stops reading the alerts after week two. This post is about what actually works, which is a shorter list than the papers suggest. If you want the background on where these alerts end up, read [SIEM explained for developers](/blog/siem-explained-for-developers/) first.
+That is machine learning intrusion detection in miniature: a model that learns exactly what you show it, a network that never stops changing, and an analyst who stops reading the alerts after week two. This post is about what actually works, which is a shorter list than the papers suggest. 
 
 ## Signature versus anomaly detection: two ways to be wrong
 

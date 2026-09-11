@@ -1,9 +1,9 @@
 # Writing style guide — shariarkabir.com/blog
 
 Author voice: **Shariar Kabir**, Researcher in AI & cybersecurity at the University of Portsmouth.
-Works on Zero Trust for 6G (Horizon Europe XTRUST-6G), forensic detection of AI-generated images (DeepGuard),
-and a cyber range platform used for university labs (CyberRange.world). Past research: ML for dementia
-detection, skin disease, medicinal plant identification (transfer learning).
+Do not describe his projects or research in any post (confidential). Do not name any other person.
+He is a researcher, not a lecturer: never "my students", "my class", "I teach".
+Claim only real things: no invented first-person anecdotes; use generic scenarios instead.
 
 ## Tone
 
@@ -14,8 +14,7 @@ detection, skin disease, medicinal plant identification (transfer learning).
 - First person singular. Short paragraphs. Plain words over jargon; define jargon the first time.
 - No profanity. No fabricated statistics, benchmarks, quotes or citations. If a number is illustrative,
   say "say" or "roughly". Cite only well-known, real sources (NIST SP 800-207, OWASP Top 10, official docs).
-- Do not invent results from my own research. You may mention DeepGuard / CyberRange.world / XTRUST-6G in
-  one sentence as context, described exactly as above.
+- Never mention DeepGuard, CyberRange.world, XTRUST-6G, 6G, or any component of that work.
 - British spelling (organisation, behaviour, analyse).
 
 ## Structure (every post)
@@ -29,7 +28,7 @@ detection, skin disease, medicinal plant identification (transfer learning).
 5. A `## What to remember` section: 4–6 bullet takeaways.
 6. Optional `## Further reading`: 2–4 real links (official docs/standards only). No made-up URLs.
 7. One closing sentence with a final joke or a nudge to the next post.
-8. Length: 1100–1600 words.
+8. Length: 600–900 words. Short, sarcastic, informative. Not a tutorial.
 9. No `#` H1 in the body (the title is the H1). Start at `##`.
 
 ## SEO

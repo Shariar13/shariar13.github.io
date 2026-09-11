@@ -1,8 +1,8 @@
 ---
 title: "Federated Learning Explained: Privacy-Preserving ML"
 date: 2026-06-23
-description: "Federated learning explained: FedAvg, why shared gradients leak, differential privacy, secure aggregation, and the real costs in healthcare and 6G."
-tags: [Machine Learning, AI, Cybersecurity, 6G]
+description: "Federated learning explained: FedAvg, why shared gradients leak, differential privacy, secure aggregation, and the real costs in healthcare and edge networks."
+tags: [Machine Learning, AI, Cybersecurity, Research]
 ---
 
 A hospital once asked me, in effect, whether they could have the benefits of a model trained on five hospitals' scans without any of the five hospitals sending anyone their scans. My first instinct was to say no, that is not how training works. My second instinct was to remember that this is precisely how federated learning works, and that I had read the original paper only a few weeks earlier.
@@ -79,13 +79,13 @@ The intuition is masking. Each pair of clients agrees on a random mask; one adds
 
 Combine the two and you get the sensible design: secure aggregation so no single update is ever visible, and differential privacy so the aggregate itself does not give individuals away. Neither one alone is enough, and I have yet to see a product page admit that.
 
-## Where federated learning fits: healthcare and the 6G edge
+## Where federated learning fits: healthcare and edge networks
 
 Two settings make the whole trade-off worthwhile.
 
 **Healthcare** is the obvious one. Medical imaging models want data from many hospitals, because a model trained on one scanner in one city generalises badly. Moving scans between institutions is a regulatory nightmare. Moving models is paperwork, but survivable. The [dementia detection work](/blog/machine-learning-dementia-detection/) I wrote about earlier is exactly the kind of model that would benefit from more sites and more scanners, and the reason that is hard to arrange is the problem federated learning exists to solve.
 
-**Telecoms** is the less obvious one, and where I spend my time now. A 6G network has thousands of edge nodes, each seeing local traffic, each able to train an anomaly detector on what it sees, and none of which should be shipping raw traffic to a central server. That is federated learning with a Zero Trust twist, because the clients are also the things being protected, and any of them might be compromised. My work on [Zero Trust for 6G networks](/blog/zero-trust-architecture-for-6g-networks/) touches on this.
+**Telecoms** is the less obvious one, and where I spend my time now. A large edge network has thousands of nodes, each seeing local traffic, each able to train an anomaly detector on what it sees, and none of which should be shipping raw traffic to a central server. That is federated learning with a security twist, because the clients are also the things being protected, and any of them might be compromised. 
 
 ## The practical costs: non-IID data, stragglers, communication
 
@@ -106,4 +106,4 @@ Add DP noise and secure aggregation overhead to that list, and "just do it feder
 - Secure aggregation hides individual updates from the server; you want both, not either.
 - Non-IID data, stragglers and communication cost are the price, and they are not small.
 
-You can find the rest of the 6G and privacy work on the [research page](/#research). Or, if you prefer, keep emailing spreadsheets of patient data around and hope. Only one of these approaches comes with a proof attached.
+You can find more on the [research page](/#research). Or, if you prefer, keep emailing spreadsheets of patient data around and hope. Only one of these approaches comes with a proof attached.

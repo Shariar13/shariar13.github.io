@@ -50,7 +50,7 @@ Feeding the PE are what the document calls supporting sources: an identity provi
 
 Two design ideas carry most of the weight.
 
-**Identity-centric access** means the primary question is "who or what is asking?", answered by strong authentication: a human with MFA, a workload with a short-lived certificate, a device with an attested identity. The IP address is a hint at best. In practice this pushes you towards an identity provider issuing short-lived tokens and every service validating them, which is the world of [OAuth 2.0 and OpenID Connect](/blog/oauth2-oidc-keycloak-explained/).
+**Identity-centric access** means the primary question is "who or what is asking?", answered by strong authentication: a human with MFA, a workload with a short-lived certificate, a device with an attested identity. The IP address is a hint at best. In practice this pushes you towards an identity provider issuing short-lived tokens and every service validating them, which is the world of OAuth 2.0 and OpenID Connect.
 
 **Micro-segmentation** means shrinking the "inside" until it barely exists. Instead of one flat network where the payroll database can hear the printer, each workload sits in a segment of one, and the only way in is through a PEP that checks policy. A compromised printer can then attack precisely nothing except its own print queue. This is my fridge's situation, and I stand by it.
 
@@ -64,7 +64,7 @@ Authenticating once and issuing a long-lived session is just the perimeter model
 - The account's behaviour shifts (new country, unusual volume): its trust score falls and sensitive resources demand step-up authentication.
 - The token expires after minutes rather than days, so revocation actually means something.
 
-The signals come from telemetry, which is why a [SIEM stops being a compliance box and becomes an input](/blog/siem-explained-for-developers/) to access decisions. Logging is no longer only about finding out afterwards; it is about changing the answer now.
+The signals come from telemetry, which is why a SIEM stops being a compliance box and becomes an input to access decisions. Logging is no longer only about finding out afterwards; it is about changing the answer now.
 
 ## Perimeter vs Zero Trust at a glance
 
@@ -102,4 +102,4 @@ The signals come from telemetry, which is why a [SIEM stops being a compliance b
 - [NIST SP 800-207, Zero Trust Architecture](https://csrc.nist.gov/pubs/sp/800/207/final), the primary source and shorter than you fear.
 - [NCSC Zero Trust architecture design principles](https://www.ncsc.gov.uk/collection/zero-trust-architecture), a readable UK companion.
 
-Next, the same principles applied to a network with a few billion devices in it: [Zero Trust for 6G networks](/blog/zero-trust-architecture-for-6g-networks/), which is where most of my [research time](/#research) goes. The fridge, meanwhile, remains on probation.
+Next, the same principles applied to a network with a few billion devices in it: Zero Trust for 6G networks, which is where most of my [research time](/#research) goes. The fridge, meanwhile, remains on probation.

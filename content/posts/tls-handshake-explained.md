@@ -86,7 +86,7 @@ r = requests.get(
 
 Everything above authenticates the server to the client. **Mutual TLS (mTLS)** adds the reverse: the client also presents a certificate, and the server verifies it against a CA it trusts. Now both ends have a cryptographic identity, and the network they are talking over does not matter.
 
-That is exactly the property Zero Trust wants. If you have read about [my slow slide into cybersecurity paranoia](/blog/zero-trust-zero-friends-my-journey-to-cybersecurity-paranoia/), you know the principle: never trust the network, always verify the identity. mTLS between services, with short-lived certificates issued automatically, is one of the more practical ways to make that real, and it is the workload-identity layer in much of the [Zero Trust work I do for 6G](/#research). It is also the reason service meshes exist, though that is a rant for a different day.
+That is exactly the property Zero Trust wants. If you have read about [my slow slide into cybersecurity paranoia](/blog/zero-trust-zero-friends-my-journey-to-cybersecurity-paranoia/), you know the principle: never trust the network, always verify the identity. mTLS between services, with short-lived certificates issued automatically, is one of the more practical ways to make that real, and it is the workload-identity layer in most Zero Trust designs. It is also the reason service meshes exist, though that is a rant for a different day.
 
 ## What to remember
 
