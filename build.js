@@ -158,6 +158,7 @@ function layout({ title, description, canonical, body, ogType = "website", ogIma
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+<canvas class="bg-net" data-network aria-hidden="true"></canvas>
 <header class="site-header site-header--band">
   <div class="page site-header__inner">
     <a class="brand" href="/" aria-label="Shariar Kabir, home"><span class="brand__mark" aria-hidden="true">SK</span>Shariar Kabir</a>
@@ -225,7 +226,6 @@ function renderPost(p, older, newer) {
   const shareUrl = encodeURIComponent(p.url), shareText = encodeURIComponent(p.title);
   const body = `
 <div class="band band--slim">
-  <canvas data-network aria-hidden="true"></canvas>
   <div class="page band__inner">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Writing</a></nav>
     <h1>${esc(p.title)}</h1>
@@ -281,7 +281,6 @@ function renderBlogIndex(posts) {
   const tags = Object.keys(tagCount).sort((a, b) => tagCount[b] - tagCount[a] || a.localeCompare(b));
   const body = `
 <div class="band band--slim">
-  <canvas data-network aria-hidden="true"></canvas>
   <div class="page band__inner">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Writing</nav>
     <h1>Writing</h1>

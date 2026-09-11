@@ -88,7 +88,8 @@
   var LINK = 150;
 
   function resize() {
-    var r = canvas.parentElement.getBoundingClientRect();
+    var full = canvas.classList.contains("bg-net");
+    var r = full ? { width: window.innerWidth, height: window.innerHeight } : canvas.parentElement.getBoundingClientRect();
     DPR = Math.min(window.devicePixelRatio || 1, 2);
     W = Math.max(1, Math.floor(r.width)); H = Math.max(1, Math.floor(r.height));
     canvas.width = W * DPR; canvas.height = H * DPR;
@@ -115,6 +116,7 @@
   }
 
   function draw(ts) {
+    var light = root.getAttribute("data-theme") !== "dark";
     if (!running) return;
     var dt = Math.min(32, ts - last || 16); last = ts;
     ctx.clearRect(0, 0, W, H);
@@ -134,7 +136,7 @@
         var dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy;
         if (d2 < LINK * LINK) {
           var d = Math.sqrt(d2), alpha = (1 - d / LINK) * .35;
-          ctx.strokeStyle = "rgba(143,180,255," + alpha.toFixed(3) + ")";
+          ctx.strokeStyle = (light ? "rgba(47,109,246," : "rgba(143,180,255,") + (light ? alpha * 0.7 : alpha).toFixed(3) + ")";
           ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
         }
       }
@@ -143,9 +145,9 @@
     for (i = 0; i < nodes.length; i++) {
       a = nodes[i];
       ctx.beginPath(); ctx.arc(a.x, a.y, a.hub ? a.r + 1.4 : a.r, 0, Math.PI * 2);
-      ctx.fillStyle = a.hub ? "rgba(61,211,240,.95)" : "rgba(200,216,255,.75)";
+      ctx.fillStyle = a.hub ? (light ? "rgba(25,150,190,.9)" : "rgba(61,211,240,.95)") : (light ? "rgba(47,109,246,.55)" : "rgba(200,216,255,.75)");
       ctx.fill();
-      if (a.hub) { ctx.beginPath(); ctx.arc(a.x, a.y, a.r + 6, 0, Math.PI * 2); ctx.strokeStyle = "rgba(61,211,240,.25)"; ctx.stroke(); }
+      if (a.hub) { ctx.beginPath(); ctx.arc(a.x, a.y, a.r + 6, 0, Math.PI * 2); ctx.strokeStyle = light ? "rgba(25,150,190,.25)" : "rgba(61,211,240,.25)"; ctx.stroke(); }
     }
     /* packets */
     if (Math.random() < .06) spawnPacket();
@@ -154,9 +156,9 @@
       if (p.t >= 1) { packets.splice(i, 1); continue; }
       var px = p.a.x + (p.b.x - p.a.x) * p.t, py = p.a.y + (p.b.y - p.a.y) * p.t;
       ctx.beginPath(); ctx.arc(px, py, 2.2, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(255,255,255,.95)"; ctx.fill();
+      ctx.fillStyle = light ? "rgba(31,79,196,.95)" : "rgba(255,255,255,.95)"; ctx.fill();
       ctx.beginPath(); ctx.arc(px, py, 6, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(61,211,240,.25)"; ctx.fill();
+      ctx.fillStyle = light ? "rgba(31,79,196,.2)" : "rgba(61,211,240,.25)"; ctx.fill();
     }
     raf = requestAnimationFrame(draw);
   }
