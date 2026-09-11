@@ -5,7 +5,7 @@ description: "What a cyber range is, the main types of hands-on security lab, th
 tags: [Cyber Range, Education, Cybersecurity]
 ---
 
-In a discussion with one of my professors, they described a common situation in security teaching. A lecturer delivers a full session on SQL injection, with diagrams and worked examples of vulnerable queries. At the end a student asks whether they can try it themselves. The answer has to be no, because the only systems available are live university services, and attacking those is not an option. The observation, and the idea behind this post, came from that discussion rather than from me.
+In a discussion with one of my professors, they described the central challenge of practical security teaching. A lecture on SQL injection can explain the vulnerability clearly, with diagrams and worked examples of vulnerable queries, but the moment a student asks to try it themselves the options run out. Live university systems cannot be used as targets. Setting up vulnerable virtual machines on each student's laptop takes most of a session, fails on a different machine every week, and depends on hardware the student may not have. Requesting a dedicated lab environment from IT is possible, but provisioning takes time, and by the time it is ready the module has moved on. The result is that a practical discipline is taught mostly by description.
 
 That is the problem in one sentence. Cybersecurity is a practical discipline that we mostly teach by describing practice. You cannot learn to pick a lock from a diagram of a lock, and you cannot learn to find a vulnerability from a slide with the vulnerability circled in red. A cyber range is the fix.
 
