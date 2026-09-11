@@ -5,7 +5,7 @@ description: "What a cyber range is, the main types of hands-on security lab, th
 tags: [Cyber Range, Education, Cybersecurity]
 ---
 
-I once gave a ninety-minute lecture on SQL injection. Diagrams, colour-coded query strings, a slide with a cartoon database looking worried. At the end a student asked whether they could try it. I said no, because the only vulnerable system in the building was the timetable server and I liked my job.
+One of my professors once described giving a ninety-minute lecture on SQL injection. Diagrams, colour-coded query strings, a slide with a cartoon database looking worried. At the end a student asked whether they could try it. The answer was no, because the only vulnerable system in the building was the timetable server and they liked their job. The story is theirs, and so is the idea behind this post. I am only passing it on.
 
 That is the problem in one sentence. Cybersecurity is a practical discipline that we mostly teach by describing practice. You cannot learn to pick a lock from a diagram of a lock, and you cannot learn to find a vulnerability from a slide with the vulnerability circled in red. A cyber range is the fix.
 
@@ -105,4 +105,4 @@ Ranges make assessment easier, not harder, if you decide up front what you are m
 - [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/) for the techniques most web challenges are built around.
 - [Docker Compose documentation](https://docs.docker.com/compose/) if you are building challenge stacks from scratch.
 
-The worried cartoon database is still in my slides. It just has a URL underneath it now.
+The worried cartoon database, I am told, is still in the slides. It just has a URL underneath it now.
