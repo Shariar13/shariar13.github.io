@@ -80,7 +80,7 @@ Keep them somewhere public if the competition allows it. Employers read them, ot
 
 CTF challenges turn out to be an unusually honest form of assessment, which is why they have crept into university teaching. A flag is either right or wrong. There is no partial credit for a confident essay about SQL injection if you could not perform one.
 
-The way this usually works is on a **cyber range**: an isolated environment where each student gets their own copy of the vulnerable machines, with flags that are unique per student so that copying a friend's answer does not work. The platform logs what each student actually did, which lets the lecturer mark the process, not just the final string, and spot the person who found the flag by guessing. CyberRange.world, which I work on, is a cyber range platform used for university labs of exactly this kind, and the rest of that work sits on my [research page](/#research).
+The way this usually works is on a **cyber range**: an isolated environment where each student gets their own copy of the vulnerable machines, with flags that are unique per student so that copying a friend's answer does not work. The platform logs what each student actually did, which lets the lecturer mark the process, not just the final string, and spot the person who found the flag by guessing. Cyber range platforms of exactly this kind, used for university labs, are part of what I work on.
 
 From the student side, the advice is the same as for public CTFs: read the brief, take notes, and remember that the log is part of the assessment. From the teaching side, the advice is to make the early challenges genuinely easy. The first flag has to be reachable, or the second one never gets attempted.
 

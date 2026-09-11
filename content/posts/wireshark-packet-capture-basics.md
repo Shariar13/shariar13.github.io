@@ -55,16 +55,16 @@ If you want to know what happens inside that handshake, I wrote it up in [how th
 
 You need far fewer filters than the documentation suggests. These cover most of a working day:
 
-- `ip.addr == 192.168.1.10` — anything to or from one host
-- `tcp.port == 443` or `udp.port == 53` — one port, either direction
-- `http.request` — every HTTP request
-- `http.request.method == "POST"` — only the ones that submit data
-- `tls.handshake` — the visible part of every TLS session
-- `dns.flags.response == 0` — DNS queries only
-- `tcp.flags.syn == 1 && tcp.flags.ack == 0` — connection attempts
-- `tcp.analysis.flags` — everything Wireshark thinks is wrong
-- `!(arp || icmp)` — hide the background chatter
-- `frame contains "password"` — for the moment you stop trusting the application
+- `ip.addr == 192.168.1.10`: anything to or from one host
+- `tcp.port == 443` or `udp.port == 53`: one port, either direction
+- `http.request`: every HTTP request
+- `http.request.method == "POST"`: only the ones that submit data
+- `tls.handshake`: the visible part of every TLS session
+- `dns.flags.response == 0`: DNS queries only
+- `tcp.flags.syn == 1 && tcp.flags.ack == 0`: connection attempts
+- `tcp.analysis.flags`: everything Wireshark thinks is wrong
+- `!(arp || icmp)`: hide the background chatter
+- `frame contains "password"`: for the moment you stop trusting the application
 
 Combine them with `&&`, `||` and `!`. Wireshark colours the filter bar green when the syntax is valid and red when it is not, which is more feedback than most compilers give.
 

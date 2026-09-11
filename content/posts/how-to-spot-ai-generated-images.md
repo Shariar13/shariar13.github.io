@@ -9,7 +9,7 @@ A colleague once sent me a photo of a "rare Portsmouth sunset" and asked whether
 
 That is the state of the art for human deepfake detection: counting fingers and hoping the model made a mistake that a toddler would spot. Modern generators do not make those mistakes any more. The hands are fine. The teeth are fine. The sunset is geographically impossible, but so are most stock photos.
 
-So this post is about how AI-generated image detection actually works when you stop trusting your eyes, which is the problem I work on with [DeepGuard](/blog/deepguard-ai-image-authentication/). None of it is magic. Most of it is statistics that a camera leaves behind and a diffusion model forgets to fake.
+So this post is about how AI-generated image detection actually works when you stop trusting your eyes, which is the problem I work on in my research. None of it is magic. Most of it is statistics that a camera leaves behind and a diffusion model forgets to fake.
 
 ## Why "it looks fake" is not a detection method
 
@@ -70,7 +70,7 @@ Each signal has a failure mode:
 
 Notice that "metadata" is on that list purely so I can tell you to stop relying on it. EXIF data is a text field. Anyone can write "Canon EOS R5" into it. Absence of metadata proves nothing either, because every messaging app strips it.
 
-The sensible design is to combine several weak, independent signals into one classifier and report a calibrated probability, not a verdict. That is the design philosophy behind DeepGuard: forensic features plus semantic embeddings, feeding a lightweight model that can explain which signal fired. A detector that says "fake, 97%, because of frequency peaks and no sensor pattern" is useful evidence. A detector that says "fake" is an opinion with a GPU.
+The sensible design is to combine several weak, independent signals into one classifier and report a calibrated probability, not a verdict. That is the design philosophy I favour: forensic features plus semantic embeddings, feeding a lightweight model that can explain which signal fired. A detector that says "fake, 97%, because of frequency peaks and no sensor pattern" is useful evidence. A detector that says "fake" is an opinion with a GPU.
 
 ## What a good detector reports
 
@@ -96,6 +96,4 @@ A detector with 99.9% accuracy on its own test set and no answer to the above is
 ## Further reading
 
 - [NIST Media Forensics Challenge](https://www.nist.gov/itl/iad/mig/media-forensics-challenge) for how evaluation is done properly.
-- [OpenAI CLIP paper](https://arxiv.org/abs/2103.00020) for the model behind the embedding approach.
-
-If you want the summary of what all this became, the [DeepGuard overview](/blog/deepguard-ai-image-authentication/) is the short version. Or count fingers. It is character-building.
+- [OpenAI CLIP paper](https://arxiv.org/abs/2103.00020) for the model behind the embedding approach. Or count fingers. It is character-building.

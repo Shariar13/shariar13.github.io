@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * build.js — static site builder for shariarkabir.com
+* build.js: static site builder for shariarkabir.com
  *
  * - Copies the static site (index.html, assets, config files) into ./dist
  * - Renders every Markdown post in ./content/posts into /blog/<slug>/index.html
@@ -129,7 +129,7 @@ function layout({ title, description, canonical, body, ogType = "website", ogIma
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="theme-color" content="#fcfcfa">
   <link rel="canonical" href="${esc(canonical)}">
-  <link rel="alternate" type="application/rss+xml" title="${esc(SITE.name)} — Writing" href="${SITE.url}/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="${esc(SITE.name)} | Writing" href="${SITE.url}/feed.xml">
   <meta property="og:type" content="${ogType}">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="${esc(SITE.name)}">
@@ -235,13 +235,13 @@ ${p.html}
     ${newer ? `<a href="${newer.path}" class="next"><small>Newer</small>${esc(newer.title)}</a>` : ""}
   </nav>
 </article>`;
-  return layout({ title: `${p.title} — Shariar Kabir`, description: p.description, canonical: p.url, body, ogType: "article", ogImage: p.image ? SITE.url + p.image : SITE.ogImage, jsonLd,
+  return layout({ title: `${p.title} | Shariar Kabir`, description: p.description, canonical: p.url, body, ogType: "article", ogImage: p.image ? SITE.url + p.image : SITE.ogImage, jsonLd,
     extraHead: `<meta property="article:published_time" content="${p.date}"><meta property="article:author" content="${SITE.author.url}">${p.tags.map((t) => `<meta property="article:tag" content="${esc(t)}">`).join("")}` });
 }
 
 function renderBlogIndex(posts) {
   const jsonLd = {
-    "@context": "https://schema.org", "@type": "Blog", "@id": SITE.url + "/blog/#blog", url: SITE.url + "/blog/", name: "Shariar Kabir — Writing", description: SITE.description,
+    "@context": "https://schema.org", "@type": "Blog", "@id": SITE.url + "/blog/#blog", url: SITE.url + "/blog/", name: "Shariar Kabir | Writing", description: SITE.description,
     author: { "@type": "Person", "@id": SITE.url + "/#person", name: SITE.author.name },
     blogPost: posts.map((p) => ({ "@type": "BlogPosting", headline: p.title, url: p.url, datePublished: p.date })),
   };
@@ -254,7 +254,7 @@ function renderBlogIndex(posts) {
 <section class="article" style="padding-top:24px">
   ${posts.length ? `<ul class="post-list">${posts.map(postItem).join("\n")}</ul>` : `<p>No posts yet.</p>`}
 </section>`;
-  return layout({ title: "Writing — Shariar Kabir", description: SITE.description, canonical: SITE.url + "/blog/", body, jsonLd });
+  return layout({ title: "Writing | Shariar Kabir", description: SITE.description, canonical: SITE.url + "/blog/", body, jsonLd });
 }
 
 function renderSitemap(posts) {
@@ -284,7 +284,7 @@ function renderFeed(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Shariar Kabir — Writing</title>
+    <title>Shariar Kabir | Writing</title>
     <link>${SITE.url}/blog/</link>
     <atom:link href="${SITE.url}/feed.xml" rel="self" type="application/rss+xml"/>
     <description>${esc(SITE.description)}</description>

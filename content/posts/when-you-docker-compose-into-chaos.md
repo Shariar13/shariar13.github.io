@@ -138,7 +138,7 @@ secrets:
 
 Note `start_period`: failures during that window do not count towards `retries`, so a slow first-time database initialisation does not get the container marked unhealthy before it has had a fair chance.
 
-This is the pattern the lab stacks on [CyberRange.world](/#research) now use, and the number of 2am messages has dropped in a way I am not going to put a statistic on, because I did not measure it. I just sleep more.
+This is the pattern my lab stacks now use, and the number of 2am messages has dropped in a way I am not going to put a statistic on, because I did not measure it. I just sleep more.
 
 ## What to remember
 

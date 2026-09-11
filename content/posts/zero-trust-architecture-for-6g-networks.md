@@ -9,7 +9,7 @@ tags: [Zero Trust, 6G, Cybersecurity, Research]
 
 Imagine an office building where every desk, chair and light bulb has a network interface, the tenants change hourly, the walls are software, and the building manager is a machine learning model. Now secure it with a firewall at the front door.
 
-You cannot. Which is why Zero Trust Architecture for 6G networks is not a buzzword-pairing exercise; it is the only model that survives contact with the design. I work on this as part of the Horizon Europe XTRUST-6G project, and this post is the general shape of the problem plus one workable way to build the trust plane from open components. It does not describe project results, because those go through peer review, not a blog.
+You cannot. Which is why Zero Trust Architecture for 6G networks is not a buzzword-pairing exercise; it is the only model that survives contact with the design. I work on this in my research, and this post is the general shape of the problem plus one workable way to build the trust plane from open components. It does not describe project results, because those go through peer review, not a blog.
 
 ## Why 6G networks need Zero Trust
 

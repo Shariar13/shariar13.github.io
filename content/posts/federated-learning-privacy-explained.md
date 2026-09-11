@@ -85,7 +85,7 @@ Two settings make the whole trade-off worthwhile.
 
 **Healthcare** is the obvious one. Medical imaging models want data from many hospitals, because a model trained on one scanner in one city generalises badly. Moving scans between institutions is a regulatory nightmare. Moving models is paperwork, but survivable. The [dementia detection work](/blog/machine-learning-dementia-detection/) I wrote about earlier is exactly the kind of model that would benefit from more sites and more scanners, and the reason that is hard to arrange is the problem federated learning exists to solve.
 
-**Telecoms** is the less obvious one, and where I spend my time now. A 6G network has thousands of edge nodes, each seeing local traffic, each able to train an anomaly detector on what it sees, and none of which should be shipping raw traffic to a central server. That is federated learning with a Zero Trust twist, because the clients are also the things being protected, and any of them might be compromised. My work on [Zero Trust for 6G networks](/blog/zero-trust-architecture-for-6g-networks/) touches on this, as does XTRUST-6G, the Horizon Europe project I contribute to on the same subject.
+**Telecoms** is the less obvious one, and where I spend my time now. A 6G network has thousands of edge nodes, each seeing local traffic, each able to train an anomaly detector on what it sees, and none of which should be shipping raw traffic to a central server. That is federated learning with a Zero Trust twist, because the clients are also the things being protected, and any of them might be compromised. My work on [Zero Trust for 6G networks](/blog/zero-trust-architecture-for-6g-networks/) touches on this.
 
 ## The practical costs: non-IID data, stragglers, communication
 

@@ -94,7 +94,7 @@ None of these are technical. All of them come down to habits, which is why the d
 
 ## Where image forensics fits into a wider investigation
 
-I spend most of my research time on a narrow corner of this field: deciding whether a photograph was made by a camera or a generative model, which is the [DeepGuard](/blog/deepguard-ai-image-authentication/) project in one sentence. It is easy to think of that as a self-contained problem. It is not.
+I spend most of my research time on a narrow corner of this field: deciding whether a photograph was made by a camera or a generative model, which is my own research area in one sentence. It is easy to think of that as a self-contained problem. It is not.
 
 An image detector answers one question about one file. An investigation needs to know where that file came from, when it arrived, who sent it, whether the copy being analysed is the copy that was collected, and whether the analysis method can be explained and reproduced. Those are acquisition, timeline, chain of custody and documentation again. The classifier is a witness; the process is what makes the witness credible. If you want the technical side of that witness, [how to spot AI-generated images](/blog/how-to-spot-ai-generated-images/) covers what the detectors actually measure, and the broader [research overview](/#research) shows where it sits alongside the rest.
 

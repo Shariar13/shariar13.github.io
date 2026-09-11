@@ -93,7 +93,7 @@ Write findings for the developer or administrator who will fix them. "Vulnerable
 
 None of this becomes real until you do it, and you cannot do it on systems you do not own. The good news is that legal practice is abundant.
 
-- **Cyber ranges and lab platforms** built for exactly this. I built [CyberRange.world](/#research) for university lab sessions, and wrote about [what a cyber range is](/blog/what-is-a-cyber-range/) and how to design an exercise for one.
+- **Cyber ranges and lab platforms** built for exactly this. I work on cyber range platforms for university lab sessions, and wrote about [what a cyber range is](/blog/what-is-a-cyber-range/) and how to design an exercise for one.
 - **Capture-the-flag competitions**, which are explicitly designed to be attacked and usually publish a scope and rules.
 - **Your own lab.** Two virtual machines on an isolated virtual network; deliberately vulnerable images exist for exactly this.
 - **Bug bounty programmes**, but only after reading the programme's scope with the same care as a contract, because it is one.

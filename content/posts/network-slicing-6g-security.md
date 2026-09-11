@@ -62,7 +62,7 @@ The threats fall into a handful of families.
 
 ## Zero Trust and per-slice policy
 
-The classic model treats the operator's core as a trusted zone. Slicing, multi-tenancy and third-party network functions make that indefensible, which is why Zero Trust keeps appearing in 6G security discussions. I work on this as part of the Horizon Europe XTRUST-6G project, which looks at Zero Trust for 6G networks; the [6G Zero Trust architecture post](/blog/zero-trust-architecture-for-6g-networks/) covers the overall shape.
+The classic model treats the operator's core as a trusted zone. Slicing, multi-tenancy and third-party network functions make that indefensible, which is why Zero Trust keeps appearing in 6G security discussions. I work on Zero Trust for 6G networks in my research; the [6G Zero Trust architecture post](/blog/zero-trust-architecture-for-6g-networks/) covers the overall shape.
 
 Applied to slicing, the principles are concrete:
 

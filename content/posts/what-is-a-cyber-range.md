@@ -9,7 +9,7 @@ I once gave a ninety-minute lecture on SQL injection. Diagrams, colour-coded que
 
 That is the problem in one sentence. Cybersecurity is a practical discipline that we mostly teach by describing practice. You cannot learn to pick a lock from a diagram of a lock, and you cannot learn to find a vulnerability from a slide with the vulnerability circled in red. A cyber range is the fix.
 
-This post explains what a cyber range is, the main types, what goes into building one, and how to design a lab exercise that teaches something rather than just occupying a Tuesday afternoon. I built [CyberRange.world](/#research), which is used for daily lab sessions at the University of Portsmouth and partner universities, so this is a mix of design principles and things I got wrong first.
+This post explains what a cyber range is, the main types, what goes into building one, and how to design a lab exercise that teaches something rather than just occupying a Tuesday afternoon. I work on a cyber range platform used for university lab sessions, so this is a mix of design principles and things I got wrong first.
 
 ## What is a cyber range?
 

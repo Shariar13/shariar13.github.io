@@ -7,7 +7,7 @@ tags: [6G, Zero Trust, AI, Cybersecurity]
 
 In a 5G network, when something goes wrong, a person eventually opens a configuration file. In an AI-native 6G network, the plan is that a model opens it first. I asked, at a workshop, what happens if the model is wrong. The answer was a diagram with a box labelled "AI orchestration" and an arrow pointing back at itself.
 
-That box is where I spend my working days. As part of the Horizon Europe XTRUST-6G project, I work on Zero Trust for 6G, which mostly means asking what happens when the thing making network decisions is a model that somebody could have tampered with.
+That box is where I spend my working days. In my research I work on Zero Trust for 6G, which mostly means asking what happens when the thing making network decisions is a model that somebody could have tampered with.
 
 So this post is about AI-native 6G security threats: what "AI-native" actually means, where the new attack surface is, and why the answer keeps coming back to continuous verification. If you want the Zero Trust groundwork first, start with [Zero Trust architecture for 6G networks](/blog/zero-trust-architecture-for-6g-networks/); this post is the sequel where the models turn on you.
 

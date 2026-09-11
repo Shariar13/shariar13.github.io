@@ -7,7 +7,7 @@ tags: [AI, Deep Learning, Cybersecurity, Computer Vision]
 
 The first time I saw an adversarial example I assumed the demo was rigged. A photo of a panda, correctly classified as a panda. Add a layer of noise so faint that the two images are indistinguishable to a person, and the same network declares it a gibbon, with more confidence than it had in the panda. That is the famous figure from the paper that introduced the fast gradient sign method, and it is not rigged. It is just what happens when you ask a model the right question in the wrong direction.
 
-I now work on detecting AI-generated images with [DeepGuard](/blog/deepguard-ai-image-authentication/), which means I spend a lot of time thinking about what happens when the thing being detected is allowed to fight back. A classifier that is accurate on ordinary images and useless on images somebody wanted it to misclassify is not a security tool. It is a suggestion.
+I work on AI-generated image detection in my research, which means I spend a lot of time thinking about what happens when the thing being detected is allowed to fight back. A classifier that is accurate on ordinary images and useless on images somebody wanted it to misclassify is not a security tool. It is a suggestion.
 
 This post is about adversarial examples: why tiny perturbations flip predictions, how the simplest attack works, why attacks transfer between models, how they escape into the physical world, and what the defences actually buy you.
 
