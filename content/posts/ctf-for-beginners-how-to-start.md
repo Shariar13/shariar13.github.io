@@ -51,7 +51,7 @@ The ethics extend beyond legality. Do not share flags during a live competition.
 
 ## A beginner CTF workflow
 
-Here is the loop I teach, which is also, not coincidentally, the loop from my [penetration testing methodology for beginners](/blog/penetration-testing-methodology-for-beginners/) shrunk down to fit a single challenge:
+Here is the loop I recommend, which is also, not coincidentally, the loop from my [penetration testing methodology for beginners](/blog/penetration-testing-methodology-for-beginners/) shrunk down to fit a single challenge:
 
 1. **Read the challenge twice.** The title and description are usually a hint. "Ancient Rome" means Caesar cipher. "Look closer" means metadata or steganography.
 2. **Identify what you have been given.** Run `file` on it. Is it a PCAP, an ELF binary, a PNG, a URL, a block of base64?

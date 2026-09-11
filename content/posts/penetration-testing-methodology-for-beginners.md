@@ -5,7 +5,7 @@ description: "A beginner's penetration testing methodology: authorisation and sc
 tags: [Penetration Testing, Cybersecurity, Education]
 ---
 
-The first thing a new student asks in my labs is "can I hack the university Wi-Fi?" The answer is no, followed by a short explanation of the Computer Misuse Act, followed by the same student asking whether their landlord's router counts. It does not count either.
+The first thing a newcomer asks in any security lab is "can I hack the university Wi-Fi?" The answer is no, followed by a short explanation of the Computer Misuse Act, followed by the same person asking whether their landlord's router counts. It does not count either.
 
 I understand the impulse. Penetration testing looks like the exciting part of cybersecurity, the tools are free, and every tutorial starts with `nmap` and skips the paperwork. But the paperwork is the job. A penetration test without authorisation is not a penetration test. It is a crime with a nicer name.
 

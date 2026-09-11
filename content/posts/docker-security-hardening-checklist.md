@@ -5,11 +5,11 @@ description: "A practical Docker security hardening checklist: non-root users, r
 tags: [Docker, Cybersecurity, DevOps]
 ---
 
-A student once escaped one of my challenge containers in under ten minutes. Not through the vulnerable web app I had spent a weekend writing. Through the Docker socket I had mounted "temporarily" so a helper script could restart things. He was polite about it. I was not, mostly at myself.
+A familiar story from anyone who runs security labs: a participant escapes a challenge container in under ten minutes. Not through the vulnerable web app that took a weekend to write. Through the Docker socket that was mounted "temporarily" so a helper script could restart things. The participant is usually polite about it. The person who mounted the socket usually is not, mostly at themselves.
 
 Docker security has one underlying problem: containers are not virtual machines. They are processes on a shared kernel with some namespaces and cgroups around them, and every default that makes Docker convenient also makes it slightly too trusting. For most people that is fine. For anyone running code they did not write, or code written specifically to be attacked, the defaults are a starting point, not a finish line.
 
-We run isolated Docker-based challenges for security teaching, where the entire point is that people attack the containers. This Docker security hardening checklist is what I now apply to every service before it goes anywhere near a student. It is not exhaustive, but it covers the mistakes that actually get exploited.
+In my research area, isolated Docker-based challenges are the standard way to run security exercises, and the entire point is that people attack the containers. This Docker security hardening checklist is what I apply to every service before it goes anywhere near an untrusted user. It is not exhaustive, but it covers the mistakes that actually get exploited.
 
 ## Run containers as a non-root user
 
@@ -43,7 +43,7 @@ security_opt:
 
 `--privileged` disables nearly every isolation feature at once. It gives the container all capabilities, access to host devices and a relaxed seccomp profile. It exists for things like running Docker inside Docker in CI. It does not exist so that a challenge container can be "easier to debug".
 
-Mounting `/var/run/docker.sock` is worse, because it does not look dangerous. Anyone who can talk to that socket can start a new container with the host's root filesystem mounted inside it, and that is the end of the exercise. That is exactly what my student did. If a container genuinely needs to orchestrate other containers, put a small, authenticated API in front of the socket with a restricted allow-list of operations, and run that API somewhere the untrusted code cannot reach.
+Mounting `/var/run/docker.sock` is worse, because it does not look dangerous. Anyone who can talk to that socket can start a new container with the host's root filesystem mounted inside it, and that is the end of the exercise. That is exactly the socket escape from the opening story. If a container genuinely needs to orchestrate other containers, put a small, authenticated API in front of the socket with a restricted allow-list of operations, and run that API somewhere the untrusted code cannot reach.
 
 ## Resource limits: the difference between a bug and an outage
 
@@ -68,7 +68,7 @@ Then pin what you deploy. A tag like `python:3.12-slim` can point to different c
 
 ## Network isolation and secrets handling
 
-Compose's default network puts every service in a project on one flat segment. For a lab that means the challenge container can reach the scoreboard database directly, which is a shortcut students will find.
+Compose's default network puts every service in a project on one flat segment. For a lab that means the challenge container can reach the scoreboard database directly, which is a shortcut participants will find.
 
 Give each trust boundary its own network. Services join only the networks they need. Mark internal networks `internal: true` so containers on them have no route to the internet, which also stops a compromised container from downloading a second-stage toolkit.
 
@@ -76,7 +76,7 @@ Secrets follow the same principle of least exposure:
 
 - Never `ENV` or `COPY` a secret into an image; it lives in the layers forever.
 - Prefer Compose `secrets:`, mounted as files under `/run/secrets/`, over environment variables, which leak into `docker inspect`, crash dumps and child processes.
-- Rotate anything a student could plausibly have seen. Assume they have.
+- Rotate anything a participant could plausibly have seen. Assume they have.
 
 Finally, leave the default **seccomp** and **AppArmor** profiles on. Docker ships a seccomp profile that blocks a few dozen syscalls nobody legitimate uses, and on Ubuntu an AppArmor profile that restricts file access. `--security-opt seccomp=unconfined` appears in a lot of forum answers. It should not appear in your compose file.
 
@@ -157,4 +157,4 @@ Note there is no `cap_add`. The app listens on 8080 as an unprivileged user, so 
 - [CIS Docker Benchmark](https://www.cisecurity.org/benchmark/docker) for the long-form checklist with audit commands.
 - [Compose file reference](https://docs.docker.com/reference/compose-file/) for every attribute used above.
 
-My student got a bonus point for the socket escape and I got a checklist. I still think I came out ahead.
+In the opening story the participant got a bonus point for the socket escape and the platform got a checklist. The platform still came out ahead.

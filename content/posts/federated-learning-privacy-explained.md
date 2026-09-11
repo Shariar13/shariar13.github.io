@@ -5,7 +5,7 @@ description: "Federated learning explained: FedAvg, why shared gradients leak, d
 tags: [Machine Learning, AI, Cybersecurity, 6G]
 ---
 
-A hospital once asked me, in effect, whether they could have the benefits of a model trained on five hospitals' scans without any of the five hospitals sending anyone their scans. My first instinct was to say no, that is not how training works. My second instinct was to remember that this is precisely how federated learning works, and that I had given a lecture on it the previous term.
+A hospital once asked me, in effect, whether they could have the benefits of a model trained on five hospitals' scans without any of the five hospitals sending anyone their scans. My first instinct was to say no, that is not how training works. My second instinct was to remember that this is precisely how federated learning works, and that I had read the original paper only a few weeks earlier.
 
 The idea is disarmingly simple. Instead of moving the data to the model, you move the model to the data. Each site trains locally, sends back what it learnt rather than what it saw, and a server stitches the lessons together. Nobody's patient records leave the building.
 
