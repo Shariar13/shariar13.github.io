@@ -111,15 +111,18 @@ function loadPosts() {
 
 /* --------------------------------------------------------------- layout */
 const ICON = {
-  sun: '<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>',
-  moon: '<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>',
-  menu: '<svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
-  close: '<svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+  sun: '<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>',
+  moon: '<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>',
+  menu: '<svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
+  close: '<svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+  arrow: '<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  cal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
 };
 
 function layout({ title, description, canonical, body, ogType = "website", ogImage = SITE.ogImage, jsonLd = null, extraHead = "" }) {
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,9 +130,8 @@ function layout({ title, description, canonical, body, ogType = "website", ogIma
   <meta name="description" content="${esc(description)}">
   <meta name="author" content="${esc(SITE.author.name)}">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta name="theme-color" content="#fcfcfa">
+  <meta name="theme-color" content="#0a1226">
   <link rel="canonical" href="${esc(canonical)}">
-  <link rel="alternate" type="application/rss+xml" title="${esc(SITE.name)} | Writing" href="${SITE.url}/feed.xml">
   <meta property="og:type" content="${ogType}">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="${esc(SITE.name)}">
@@ -145,9 +147,10 @@ function layout({ title, description, canonical, body, ogType = "website", ogIma
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="${esc(SITE.name)} | Writing" href="${SITE.url}/feed.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap">
   <link rel="stylesheet" href="/assets/css/style.css">
   <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
   ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ""}
@@ -155,13 +158,14 @@ function layout({ title, description, canonical, body, ogType = "website", ogIma
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
+<header class="site-header site-header--band">
   <div class="page site-header__inner">
-    <a class="site-name" href="/">Shariar Kabir</a>
+    <a class="brand" href="/" aria-label="Shariar Kabir, home"><span class="brand__mark" aria-hidden="true">SK</span>Shariar Kabir</a>
     <nav class="site-nav" id="nav" aria-label="Primary">
       <a href="/#about">About</a>
       <a href="/#research">Research</a>
       <a href="/#publications">Publications</a>
+      <a href="/#awards">Awards</a>
       <a href="/#experience">CV</a>
       <a href="/blog/" class="is-active">Writing</a>
     </nav>
@@ -171,15 +175,19 @@ function layout({ title, description, canonical, body, ogType = "website", ogIma
     </div>
   </div>
 </header>
-<main id="main" class="page">
+<main id="main">
 ${body}
 </main>
 <footer class="site-footer">
   <div class="page site-footer__inner">
-    <div>© <span data-year>${new Date().getFullYear()}</span> Shariar Kabir</div>
+    <div>© <span data-year>${new Date().getFullYear()}</span> Shariar Kabir · School of Computing, Mathematics and Physics, University of Portsmouth</div>
     <nav aria-label="Footer">
-      <a href="/#publications">Publications</a><a href="/blog/">Writing</a><a href="/feed.xml">RSS</a>
-      <a href="${SITE.author.scholar}" target="_blank" rel="noopener">Scholar</a><a href="${SITE.author.github}" target="_blank" rel="noopener">GitHub</a>
+      <a href="/#publications">Publications</a>
+      <a href="/#awards">Awards</a>
+      <a href="/blog/">Writing</a>
+      <a href="/feed.xml">RSS</a>
+      <a href="${SITE.author.scholar}" target="_blank" rel="noopener">Scholar</a>
+      <a href="${SITE.author.github}" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </div>
 </footer>
@@ -189,8 +197,9 @@ ${body}
 `;
 }
 
+const tagSlug = (t) => slugify(t);
 function postItem(p) {
-  return `<li><time datetime="${p.date}">${fmtDate(p.date)}</time><div><a href="${p.path}">${esc(p.title)}</a><p>${esc(p.description)}</p></div></li>`;
+  return `<li data-tags="${p.tags.map(tagSlug).join(" ")}"><a class="card" href="${p.path}"><time datetime="${p.date}">${fmtDate(p.date)}</time><div><strong>${esc(p.title)}</strong><p>${esc(p.description)}</p>${p.tags.length ? `<span class="post-list__tags">${p.tags.map(esc).join(" · ")} · ${p.minutes} min</span>` : `<span class="post-list__tags">${p.minutes} min</span>`}</div>${ICON.arrow}</a></li>`;
 }
 
 /* ------------------------------------------------------------ renderers */
@@ -200,8 +209,8 @@ function renderPost(p, older, newer) {
     "@graph": [
       {
         "@type": "BlogPosting", "@id": p.url + "#article", headline: p.title, description: p.description,
-        datePublished: p.date, dateModified: p.updated || p.date, url: p.url, mainEntityOfPage: p.url,
-        image: p.image ? SITE.url + p.image : SITE.ogImage, keywords: p.tags.join(", "), inLanguage: "en-GB",
+        datePublished: p.date, dateModified: p.updated || p.date, url: p.url, mainEntityOfPage: p.url, inLanguage: "en-GB",
+        image: p.image ? SITE.url + p.image : SITE.ogImage, keywords: p.tags.join(", "), wordCount: p.minutes * 220,
         author: { "@type": "Person", "@id": SITE.url + "/#person", name: SITE.author.name, url: SITE.author.url },
         publisher: { "@type": "Person", "@id": SITE.url + "/#person", name: SITE.author.name },
       },
@@ -214,27 +223,50 @@ function renderPost(p, older, newer) {
       },
     ],
   };
+  const shareUrl = encodeURIComponent(p.url), shareText = encodeURIComponent(p.title);
   const body = `
-<article class="article">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Writing</a></nav>
-  <h1>${esc(p.title)}</h1>
-  <p class="article__desc">${esc(p.description)}</p>
-  <div class="article__meta">
-    <span>Shariar Kabir</span>
-    <span><time datetime="${p.date}">${fmtDate(p.date)}</time></span>
-    ${p.updated ? `<span>Updated <time datetime="${p.updated}">${fmtDate(p.updated)}</time></span>` : ""}
-    <span>${p.minutes} min read</span>
+<div class="band band--slim">
+  <canvas data-network aria-hidden="true"></canvas>
+  <div class="page band__inner">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Writing</a></nav>
+    <h1>${esc(p.title)}</h1>
+    <p class="band__desc">${esc(p.description)}</p>
+    <div class="band__meta">
+      <a class="band__author" href="/#about"><img src="/assets/img/shariar-kabir-square.jpg" alt="" width="28" height="28">Shariar Kabir</a>
+      <span>${ICON.cal}<time datetime="${p.date}">${fmtDate(p.date)}</time></span>
+      ${p.updated ? `<span>Updated <time datetime="${p.updated}">${fmtDate(p.updated)}</time></span>` : ""}
+      <span>${ICON.clock}${p.minutes} min read</span>
+    </div>
+    ${p.tags.length ? `<div class="band__topics">${p.tags.map((t) => `<a href="/blog/#${tagSlug(t)}">${esc(t)}</a>`).join("")}</div>` : ""}
   </div>
+</div>
+<div class="page">
+<article class="article">
   ${p.image ? `<figure class="article__cover"><img src="${esc(p.image)}" alt="${esc(p.title)}" loading="eager" decoding="async"></figure>` : ""}
   <div class="prose">
 ${p.html}
   </div>
-  ${p.tags.length ? `<p class="article__tags">Topics: ${p.tags.map(esc).join(", ")}</p>` : ""}
+  <div class="article__tags">
+    <span>Share:</span>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}" target="_blank" rel="noopener">X</a>
+    <a href="mailto:?subject=${shareText}&body=${shareUrl}">Email</a>
+    <a href="/feed.xml">RSS</a>
+  </div>
+  <div class="author-box card">
+    <img src="/assets/img/shariar-kabir-square.jpg" alt="Shariar Kabir" width="56" height="56" loading="lazy">
+    <div>
+      <strong>Shariar Kabir</strong>
+      <p>Researcher in AI and cybersecurity, School of Computing, Mathematics and Physics, University of Portsmouth. UK Global Talent Visa, endorsed by UKRI.
+      <a href="/#about">About</a> · <a href="${SITE.author.scholar}" target="_blank" rel="noopener">Google Scholar</a> · <a href="${SITE.author.linkedin}" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </div>
   <nav class="post-nav" aria-label="Post navigation">
-    ${older ? `<a href="${older.path}" class="prev"><small>Older</small>${esc(older.title)}</a>` : "<span></span>"}
-    ${newer ? `<a href="${newer.path}" class="next"><small>Newer</small>${esc(newer.title)}</a>` : ""}
+    ${older ? `<a href="${older.path}" class="card prev"><small>Older</small><strong>${esc(older.title)}</strong></a>` : "<span></span>"}
+    ${newer ? `<a href="${newer.path}" class="card next"><small>Newer</small><strong>${esc(newer.title)}</strong></a>` : ""}
   </nav>
-</article>`;
+</article>
+</div>`;
   return layout({ title: `${p.title} | Shariar Kabir`, description: p.description, canonical: p.url, body, ogType: "article", ogImage: p.image ? SITE.url + p.image : SITE.ogImage, jsonLd,
     extraHead: `<meta property="article:published_time" content="${p.date}"><meta property="article:author" content="${SITE.author.url}">${p.tags.map((t) => `<meta property="article:tag" content="${esc(t)}">`).join("")}` });
 }
@@ -245,15 +277,27 @@ function renderBlogIndex(posts) {
     author: { "@type": "Person", "@id": SITE.url + "/#person", name: SITE.author.name },
     blogPost: posts.map((p) => ({ "@type": "BlogPosting", headline: p.title, url: p.url, datePublished: p.date })),
   };
+  const tagCount = {};
+  posts.forEach((p) => p.tags.forEach((t) => { tagCount[t] = (tagCount[t] || 0) + 1; }));
+  const tags = Object.keys(tagCount).sort((a, b) => tagCount[b] - tagCount[a] || a.localeCompare(b));
   const body = `
-<div class="page-title">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Writing</nav>
-  <h1>Writing</h1>
-  <p>${esc(SITE.description)} <a href="/feed.xml">RSS feed</a>.</p>
+<div class="band band--slim">
+  <canvas data-network aria-hidden="true"></canvas>
+  <div class="page band__inner">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Writing</nav>
+    <h1>Writing</h1>
+    <p class="band__desc">${esc(SITE.description)}</p>
+    <div class="band__meta"><span>${posts.length} articles</span><span>By Shariar Kabir</span><span><a href="/feed.xml">RSS feed</a></span></div>
+  </div>
 </div>
-<section class="article" style="padding-top:24px">
+<div class="page blog-index">
+  <div class="tagbar" role="group" aria-label="Filter by topic">
+    <button type="button" class="is-active" data-tag="">All</button>
+    ${tags.map((t) => `<button type="button" data-tag="${tagSlug(t)}" id="${tagSlug(t)}">${esc(t)} <small>${tagCount[t]}</small></button>`).join("")}
+  </div>
   ${posts.length ? `<ul class="post-list">${posts.map(postItem).join("\n")}</ul>` : `<p>No posts yet.</p>`}
-</section>`;
+  <p class="tagbar__empty" hidden>No posts with that topic yet.</p>
+</div>`;
   return layout({ title: "Writing | Shariar Kabir", description: SITE.description, canonical: SITE.url + "/blog/", body, jsonLd });
 }
 

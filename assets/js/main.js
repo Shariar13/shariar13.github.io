@@ -47,6 +47,31 @@
     }
   }
 
+
+  /* Blog index: filter by topic (buttons in .tagbar toggle list items by data-tags) */
+  var tagbar = document.querySelector(".tagbar");
+  if (tagbar) {
+    var items = document.querySelectorAll(".post-list li[data-tags]");
+    var empty = document.querySelector(".tagbar__empty");
+    function applyTag(tag) {
+      var shown = 0;
+      items.forEach(function (li) {
+        var ok = !tag || (" " + li.getAttribute("data-tags") + " ").indexOf(" " + tag + " ") !== -1;
+        li.hidden = !ok; if (ok) shown++;
+      });
+      tagbar.querySelectorAll("button").forEach(function (b) { b.classList.toggle("is-active", (b.getAttribute("data-tag") || "") === tag); });
+      if (empty) empty.hidden = shown > 0;
+    }
+    tagbar.addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      var tag = b.getAttribute("data-tag") || "";
+      applyTag(tag);
+      if (history.replaceState) history.replaceState(null, "", tag ? "#" + tag : location.pathname);
+    });
+    var initial = (location.hash || "").slice(1);
+    if (initial && tagbar.querySelector('button[data-tag="' + initial + '"]')) applyTag(initial);
+  }
+
   /* Footer year */
   var y = document.querySelector("[data-year]");
   if (y) y.textContent = new Date().getFullYear();
