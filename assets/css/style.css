@@ -409,7 +409,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 @media (max-width: 640px) { .hero__photo { width: 140px; height: 140px; } .band--hero .band__inner { padding: 36px 0 44px; } }
 
 /* ---------- Full-page network animation (fixed behind everything) ---------- */
-.bg-net { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.bg-net { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: .75; }
 .site-header, main, .site-footer, .band { position: relative; z-index: 1; }
 .site-header { z-index: 100; }
 .band { background: radial-gradient(120% 90% at 20% 0%, color-mix(in srgb, var(--band-2) 88%, transparent), color-mix(in srgb, var(--band) 90%, transparent) 60%); }
