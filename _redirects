@@ -1,0 +1,5 @@
+# Old GitHub Pages URLs → new structure
+/about.html            /#about   301
+/about                 /#about   301
+/index.html            /         301
+/posts.json            /feed.xml 301

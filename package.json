@@ -1,0 +1,16 @@
+{
+  "name": "shariarkabir.com",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Personal website and blog of Shariar Kabir — static site, hosted on Cloudflare Pages",
+  "scripts": {
+    "build": "node build.js",
+    "new": "node scripts/new-post.js",
+    "dev": "node build.js && node scripts/serve.js",
+    "serve": "node scripts/serve.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "marked": "^18.0.12"
+  }
+}
