@@ -41,7 +41,7 @@
         entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("is-visible"); io.unobserve(en.target); } });
       }, { rootMargin: "0px 0px -6% 0px", threshold: 0.05 });
       reveals.forEach(function (el) { io.observe(el); });
-      setTimeout(function () { reveals.forEach(function (el) { el.classList.add("is-visible"); }); }, 1500);
+      setTimeout(function () { reveals.forEach(function (el) { el.classList.add("is-visible"); }); }, 700);
     } else {
       reveals.forEach(function (el) { el.classList.add("is-visible"); });
     }

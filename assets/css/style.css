@@ -353,3 +353,31 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .post-list li a { grid-template-columns: 1fr auto; }
   .post-list time { grid-column: 1 / -1; }
 }
+
+/* ---------- Academic intro band (homepage) ---------- */
+.band--intro { min-height: 0; }
+.band--intro .band__inner { padding: 44px 0 56px; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 36px; align-items: start; }
+.intro__photo { border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 5; background: #0b1020; box-shadow: 0 24px 60px -24px rgba(0,0,0,.85), 0 0 0 1px rgba(255,255,255,.16); }
+.intro__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.intro__body { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.intro__name { font-family: var(--font-head); font-weight: 800; font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -.03em; color: #fff; margin: 0; line-height: 1.05; }
+.intro__role { margin: 0; color: rgba(255,255,255,.86); font-size: 1.02rem; line-height: 1.5; }
+.intro__role a { color: #cfe0ff; }
+.intro__bio { margin: 4px 0 0; color: rgba(255,255,255,.74); max-width: 700px; font-size: .98rem; line-height: 1.65; }
+.intro__bio a { color: #8fb4ff; font-weight: 500; }
+.intro__links { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 0; padding: 0; list-style: none; }
+.intro__links a { display: inline-flex; align-items: center; gap: 7px; padding: 7px 12px; border-radius: 8px; font-size: 13px; font-weight: 500; color: #fff; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); backdrop-filter: blur(4px); text-decoration: none; transition: background .15s, border-color .15s; }
+.intro__links a:hover { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.32); }
+.intro__links svg { width: 14px; height: 14px; flex: none; }
+.intro__links .ext { display: none; }
+.intro__meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 8px; font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,.62); }
+.intro__meta span { display: inline-flex; align-items: center; gap: 7px; }
+.intro__meta span::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: #3dd3f0; box-shadow: 0 0 0 3px rgba(61,211,240,.18); }
+.profile { display: block; max-width: 900px; margin: 0 auto; padding-top: clamp(36px, 5vw, 60px); }
+.content { padding-top: 0; }
+@media (max-width: 800px) { .profile { margin-top: 0; padding-top: 28px; } .content { padding-top: 0; } }
+@media (max-width: 720px) {
+  .band--intro .band__inner { grid-template-columns: 1fr; gap: 22px; padding: 28px 0 40px; }
+  .intro__photo { width: 148px; aspect-ratio: 1; border-radius: 14px; }
+  .intro__name { font-size: 2rem; }
+}

@@ -3,8 +3,9 @@
 Academic profile and writing of Shariar Kabir. Pure static site (HTML/CSS/JS), built with one tiny
 Node script, hosted free on **Cloudflare Pages** at the custom domain **shariarkabir.com**.
 
-Design intent: a restrained academic profile page (sidebar + sections, citation-style publication list),
-not a marketing site. Keep it that way: no counters, banners, call-to-action buttons or animations.
+Design intent: an academic-standard researcher profile (intro with photo and affiliation, numbered sections,
+citation-style publication list) with a modern look and a subtle animated network band. Not a marketing site:
+no counters, call-to-action buttons or sales copy. Never write other people's names, and never use em dashes.
 
 ```
 index.html            ← homepage (edit profile content here)
