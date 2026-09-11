@@ -41,18 +41,18 @@ reading time, share buttons, prev/next links, and is added to the sitemap and RS
 
 ## Deploy to Cloudflare Pages (free)
 
-1. Push this repo to GitHub.
-2. Cloudflare dashboard → **Workers & Pages → Create → Pages → Connect to Git** → pick the repo.
-3. Build settings:
-   - Framework preset: **None**
-   - Build command: `npm run build`
-   - Build output directory: `dist`
-4. Deploy. Then **Custom domains → Add** `shariarkabir.com` and `www.shariarkabir.com`.
-5. In Namecheap, change the nameservers to the two Cloudflare nameservers shown when you add
-   the domain to Cloudflare (Cloudflare → Add a site → Free plan). Cloudflare then manages DNS,
-   HTTPS and the www → apex redirect automatically.
+The site is a Cloudflare Pages project named `shariarkabir`, deployed by direct upload (no Git integration).
+Custom domains `shariarkabir.com` and `www.shariarkabir.com` are attached; DNS lives in Cloudflare.
 
-Every `git push` to `main` rebuilds and deploys in about a minute. Pull requests get preview URLs.
+Credentials are in `~/.cloudflare-env` (an API token with Cloudflare Pages: Edit and DNS: Edit, plus the
+account ID). To publish the current site:
+
+```bash
+source ~/.cloudflare-env
+npm run deploy        # builds dist/ and uploads it; live in about a minute
+```
+
+Commit and push to GitHub as well so the source is backed up (`git add -A && git commit -m "..." && git push`).
 
 ## SEO checklist after deploy
 
