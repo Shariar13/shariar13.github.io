@@ -7,7 +7,7 @@ tags: [Cyber Range, Education, Cybersecurity]
 
 In a discussion with one of my professors, they described the central challenge of practical security teaching. A lecture on SQL injection can explain the vulnerability clearly, with diagrams and worked examples of vulnerable queries, but the moment a student asks to try it themselves the options run out. Live university systems cannot be used as targets. Setting up vulnerable virtual machines on each student's laptop takes most of a session, fails on a different machine every week, and depends on hardware the student may not have. Requesting a dedicated lab environment from IT is possible, but provisioning takes time, and by the time it is ready the module has moved on. The result is that a practical discipline is taught mostly by description.
 
-That is the problem in one sentence. Cybersecurity is a practical discipline that we mostly teach by describing practice. You cannot learn to pick a lock from a diagram of a lock, and you cannot learn to find a vulnerability from a slide with the vulnerability circled in red. A cyber range is the fix.
+That is the problem a cyber range exists to solve. You cannot learn to pick a lock from a diagram of a lock, and you cannot learn to find a vulnerability from a slide with the vulnerability circled in red. A cyber range is the fix.
 
 This post explains what a cyber range is, the main types, what goes into building one, and how to design a lab exercise that teaches something rather than just occupying a Tuesday afternoon. I work on a cyber range platform used for university lab sessions, so this is a mix of design principles and things I got wrong first.
 
