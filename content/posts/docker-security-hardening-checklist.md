@@ -9,7 +9,7 @@ A student once escaped one of my challenge containers in under ten minutes. Not 
 
 Docker security has one underlying problem: containers are not virtual machines. They are processes on a shared kernel with some namespaces and cgroups around them, and every default that makes Docker convenient also makes it slightly too trusting. For most people that is fine. For anyone running code they did not write, or code written specifically to be attacked, the defaults are a starting point, not a finish line.
 
-I run isolated Docker-based challenges for security teaching, where the entire point is that people attack the containers. This Docker security hardening checklist is what I now apply to every service before it goes anywhere near a student. It is not exhaustive, but it covers the mistakes that actually get exploited.
+We run isolated Docker-based challenges for security teaching, where the entire point is that people attack the containers. This Docker security hardening checklist is what I now apply to every service before it goes anywhere near a student. It is not exhaustive, but it covers the mistakes that actually get exploited.
 
 ## Run containers as a non-root user
 

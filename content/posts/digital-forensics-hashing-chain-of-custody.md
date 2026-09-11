@@ -5,7 +5,7 @@ description: "Digital forensics fundamentals: bit-for-bit imaging, write blocker
 tags: [Digital Forensics, Cybersecurity, Education]
 ---
 
-My first "forensic" acquisition, as a student, was a `dd` command typed with the `if=` and `of=` arguments the wrong way round. I did not image the evidence drive. I wrote a blank image onto it. The drive was a practice USB stick with nothing on it, which is the only reason I am telling you this story rather than being a cautionary tale in someone else's lecture.
+The classic student "forensic" acquisition is a `dd` command typed with the `if=` and `of=` arguments the wrong way round. The evidence drive is not imaged. A blank image is written onto it. In a teaching lab the drive is a practice USB stick with nothing on it, which is the only reason this is a joke in a lecture rather than a career-ending cautionary tale.
 
 That mistake is the whole discipline in miniature. Digital forensics is not about clever tools. It is about being able to prove, to a sceptical stranger, that what you are holding is exactly what you collected, that nobody changed it, and that you can show your working for every step in between. The tools are the easy part.
 

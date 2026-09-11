@@ -5,7 +5,7 @@ description: "How machine learning intrusion detection works: flow features, ran
 tags: [Machine Learning, Cybersecurity, SIEM]
 ---
 
-The first anomaly detector I built for network traffic had one confirmed detection in its first month. It caught the nightly backup job. Every night. At 02:00, several gigabytes left the file server for the storage array, and every night the model raised the alarm like a dog that has just discovered the postman exists.
+Picture a first anomaly detector for network traffic that has one confirmed detection in its first month. It caught the nightly backup job. Every night. At 02:00, several gigabytes left the file server for the storage array, and every night the model raised the alarm like a dog that has just discovered the postman exists.
 
 Meanwhile a student in a lab was port-scanning half the subnet for a coursework exercise, and the model said nothing, because port scans had been in the training data and the training data was labelled "normal".
 

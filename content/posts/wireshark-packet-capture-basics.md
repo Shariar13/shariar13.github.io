@@ -5,7 +5,7 @@ description: "Wireshark packet capture basics: capture vs display filters, the T
 tags: [Cybersecurity, Digital Forensics, Education]
 ---
 
-The first time I opened Wireshark, I clicked the little shark fin next to my Wi-Fi interface, watched about four thousand rows scroll past in the time it took to blink, and closed the window in mild panic. I then told a colleague that packet analysis "wasn't really my thing", which is an odd position for someone who now teaches it.
+The first time most people open Wireshark, they click the little shark fin next to the Wi-Fi interface, watch about four thousand rows scroll past in the time it takes to blink, and close the window in mild panic. Then they decide packet analysis "isn't really their thing", which is a shame, because the panic is entirely fixable with two filters and one habit.
 
 The problem was not Wireshark. The problem was that I had no question. A packet capture is every conversation on a wire, in order, with nothing hidden. Without a question, it is a phone book. With one, it is the most honest witness you will ever interview, because packets do not remember things differently from how they happened.
 

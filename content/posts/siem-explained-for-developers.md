@@ -5,7 +5,7 @@ description: "SIEM explained for developers: what a SIEM does, log sources and n
 tags: [SIEM, Cybersecurity, DevOps]
 ---
 
-Years ago I wrote an authentication service that, on any error, logged the full request body "for debugging". The request body on a failed login contains the password. The service was not popular, but it faithfully wrote every typo of every user's password to a log file that was shipped to a central server, indexed, and made searchable by the whole operations team.
+Picture an authentication service that, on any error, logs the full request body "for debugging". The request body on a failed login contains the password. The service faithfully writes every typo of every user's password to a log file that is shipped to a central server, indexed, and made searchable by the whole operations team. This is not a hypothetical; it is one of the most common findings in log reviews.
 
 Nobody noticed for a long time, because nobody was reading the logs. That is the second lesson. The first is that a SIEM is only as useful as what developers put into it, and nobody tells developers what that should be.
 

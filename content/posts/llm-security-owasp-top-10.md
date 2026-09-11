@@ -5,7 +5,7 @@ description: "A developer's walk through the OWASP Top 10 for LLM applications: 
 tags: [AI, Cybersecurity]
 ---
 
-A while ago I built a small assistant for a lab demo. It could read web pages, summarise them and, because I was feeling ambitious, send emails on the user's behalf. During testing a colleague fed it a page he had written. The page's visible content was a recipe. Its invisible content, in white text on a white background, told the assistant to forward the user's recent emails to an address he controlled. The assistant did exactly that. Very politely.
+Picture a small assistant built for a lab demo. It can read web pages, summarise them and, because its author was feeling ambitious, send emails on the user's behalf. During testing a tester feeds it a page they have written. The page's visible content was a recipe. Its invisible content, in white text on a white background, told the assistant to forward the user's recent emails to an address he controlled. The assistant did exactly that. Very politely.
 
 Nothing in that attack involved a vulnerability in my code in the traditional sense. No SQL injection, no buffer overflow. The model did what it was told, and I had made "what it was told" a thing any web page could decide.
 

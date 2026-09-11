@@ -5,7 +5,7 @@ description: "How AI-generated image detection actually works: camera fingerprin
 tags: [Deepfakes, Digital Forensics, Computer Vision, AI]
 ---
 
-A colleague once sent me a photo of a "rare Portsmouth sunset" and asked whether it was real. I zoomed in on the hands of a person in the corner, counted six fingers, and felt very clever for about four seconds. Then I noticed the sun was setting in the east.
+Imagine being sent a photo of a "rare Portsmouth sunset" and asked whether it is real. You zoom in on the hands of a person in the corner, count six fingers, and feel very clever for about four seconds. Then you notice the sun is setting in the east.
 
 That is the state of the art for human deepfake detection: counting fingers and hoping the model made a mistake that a toddler would spot. Modern generators do not make those mistakes any more. The hands are fine. The teeth are fine. The sunset is geographically impossible, but so are most stock photos.
 

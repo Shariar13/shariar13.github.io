@@ -5,7 +5,7 @@ description: "How to start CTF competitions as a beginner: categories, jeopardy 
 tags: [Cyber Range, Education, Cybersecurity, Penetration Testing]
 ---
 
-My first CTF challenge was a web task worth fifty points, the lowest value on the board, described as "easy". I spent three hours on it, tried SQL injection on a form that had no database behind it, and eventually found the flag by pressing F12 and reading an HTML comment. Someone had literally written it in the page.
+A classic first CTF challenge goes like this: a web task worth fifty points, the lowest value on the board, described as "easy". The beginner spends three hours on it, tries SQL injection on a form that has no database behind it, and eventually finds the flag by pressing F12 and reading an HTML comment. Someone literally wrote it in the page. Almost everyone who plays CTFs has a story like this, and it is the right way to start.
 
 I was furious, then embarrassed, then, about a day later, hooked. Because that is what a **Capture The Flag (CTF)** competition does: it gives you a puzzle with a definite answer, a scoreboard that does not care about your feelings, and the slow realisation that the tools you have been reading about actually do something when you point them at a target.
 
