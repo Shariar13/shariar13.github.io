@@ -69,7 +69,7 @@ are not published. Delete the `draft` line in any of them to publish it again.
 
 ## Things to verify in the content
 
-- Global Talent Visa: shown as **2026**, endorsed by **UKRI**. Edit in index.html (sidebar, About, News, Awards) if needed.
+- Global Talent Visa: stated as a fact, not an award. Two places only: the sidebar chip in index.html and the Work authorisation section in cv.html.
 - Publications: all 7 from Google Scholar are listed with authors, venues and DOIs where available. Add new ones as `.pub` items in `index.html`.
 - Job title is shown as **Researcher** (user preference; the University portal says Research Assistant). School: **School of Computing, Mathematics and Physics**.
 - Experience dates and the Base Camp role description were carried over from the old site.

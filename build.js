@@ -256,7 +256,7 @@ ${p.html}
     <img src="/assets/img/shariar-kabir-square.jpg" alt="Shariar Kabir" width="56" height="56" loading="lazy">
     <div>
       <strong>Shariar Kabir</strong>
-      <p>Researcher in AI and cybersecurity, School of Computing, Mathematics and Physics, University of Portsmouth. UK Global Talent Visa, endorsed by UKRI.
+      <p>Researcher in AI and cybersecurity, School of Computing, Mathematics and Physics, University of Portsmouth.
       <a href="/#about">About</a> · <a href="${SITE.author.scholar}" target="_blank" rel="noopener">Google Scholar</a> · <a href="${SITE.author.linkedin}" target="_blank" rel="noopener">LinkedIn</a></p>
     </div>
   </div>
